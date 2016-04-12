@@ -1,0 +1,66 @@
+#! /bin/sh
+#*********************************************************************
+#  Copyright (c) Vedacom Technology.
+#  $Source: /proot/.repository/utils/cadenv/users/HEAD/units/top/source/shell/arch.guess,v $
+#  $Purpose: Canonical system name. If succeed, prints the system name on stdout, and exits with 0. Otherwise, it exits with 1.
+#  $Author: herman $
+#  $Revision: 1.2 $
+#  $Date: 2011/10/30 08:49:37 $
+#  $State: Exp $
+#  $Name:  $
+#*********************************************************************
+
+UNAME_MACHINE=`(uname -m) 2>/dev/null` || UNAME_MACHINE=unknown
+UNAME_RELEASE=`(uname -r) 2>/dev/null` || UNAME_RELEASE=unknown
+UNAME_SYSTEM=`(uname -s) 2>/dev/null` || UNAME_SYSTEM=unknown
+UNAME_VERSION=`(uname -v) 2>/dev/null` || UNAME_VERSION=unknown
+
+# Order is significant - the switch branches are not exclusive.
+case "${UNAME_MACHINE}:${UNAME_SYSTEM}:${UNAME_RELEASE}:${UNAME_VERSION}" in
+    sun4*:SunOS:6*:*)
+	echo sparc-solaris3`echo ${UNAME_RELEASE}|sed -e 's/[^.]*//'`
+	exit 0 ;;
+    sun4*:SunOS:5.[12345]:*)
+	echo sparc-solaris2
+	exit 0 ;;
+    sun4*:SunOS:*:*)
+	case "`/usr/bin/arch -k`" in
+	    Series*|S4*) UNAME_RELEASE=`uname -v` ;;
+	esac
+	case "${UNAME_RELEASE}" in
+	    4*)	echo sparc-sunos4 ;;
+	    *)	echo sparc-sunos`echo ${UNAME_RELEASE}|sed -e 's/[._]*//'` ;;
+	esac
+	exit 0 ;;
+    x86_64:Linux:*:*)
+	echo x86_64-linux
+	exit 0 ;;
+    i*86:Linux:*:*)
+	echo ${UNAME_MACHINE}-linux
+	exit 0 ;;
+    amd64:CYGWIN*:*:* | x86_64:CYGWIN*:*:*)
+	echo x86_64-cygwin
+	exit 0 ;;
+    i*86:CYGWIN*:*:*)
+	#echo ${UNAME_MACHINE}-cygwin
+	echo ${UNAME_MACHINE}-linux
+	exit 0 ;;
+    sun3*:SunOS:*:*)
+	echo m68k-sunos
+	exit 0 ;;
+esac
+
+exit 1
+
+#*********************************************************************
+#   History:
+#
+#   $Log: arch.guess,v $
+#   Revision 1.2  2011/10/30 08:49:37  herman
+#   the sh indicator should be in the first line arch.guess
+#
+#   Revision 1.1  2010/08/08 10:29:57  herman
+#   this version is not so complete, support only part of systems. Genmake contain a full version
+#
+#
+#*********************************************************************

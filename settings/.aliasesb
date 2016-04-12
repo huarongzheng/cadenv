@@ -1,0 +1,39 @@
+#!/bin/bash
+#### Aliases
+alias m='more'
+alias k='kwrite'
+alias oo='openoffice.org'
+alias h=history
+alias cp='cp -r'
+alias rm='\rm -rf'
+alias su='su -l'
+alias l='ls --color'
+alias la='ls -a --color'
+alias ll='ls -la --color'
+alias lla='ls -la --color'
+alias llg='ls -lg --color'
+alias lsd='ls -l --color | grep ^d'
+alias lad='ls -a --color -F | grep /'
+alias lld='ls -l --color | grep ^d'
+alias llad='ls -la --color | grep ^d'
+alias llgd='ls -lg --color | grep ^d'
+alias msd='auto_msd'
+alias gz='gzip'
+alias vi=vim
+alias e='emacs'
+alias xe='xemacs'
+alias ot='octave -qf'
+alias ep='enter_project'
+
+alias rd='rdesktop -g1390x970'
+
+#### myself command
+alias ccsswan='/tools/utils/cadenv/bin/ccss -cadenv-wan'
+
+alias ofdm="gnome-terminal --tab -t 'No.1 code ofdm' -e 'enter_project ip_drx_ofdm 0002' --active --tab -t 'No.2 code ofdm' -e 'enter_project ip_drx_ofdm 0002'  --tab -t 'No.3 bench ofdm' -e 'enter_project ip_drx_ofdm 0002' --tab -t 'No.4 bench ofdm' -e 'enter_project ip_drx_ofdm 0002' --tab -t 'No.5 simu ofdm' -e 'enter_project ip_drx_ofdm 0002' --tab -t 'No.6 simu ofdm' -e 'enter_project ip_drx_ofdm 0002'"
+alias com="gnome-terminal --tab -t 'No.1 code com' -e 'enter_project ip_drx_com 0001' --active --tab -t 'No.2 code com' -e 'enter_project ip_drx_com 0001'"
+alias tdofdm="gnome-terminal --tab -t 'No.1 code tdofdm' -e 'enter_project ip_drx_tdofdm 0001' --active --tab -t 'No.2 code tdofdm' -e 'enter_project ip_drx_tdofdm 0001'  --tab -t 'No.3 bench tdofdm' -e 'enter_project ip_drx_tdofdm 0001' --tab -t 'No.4 bench tdofdm' -e 'enter_project ip_drx_tdofdm 0001' --tab -t 'No.5 simu tdofdm' -e 'enter_project ip_drx_tdofdm 0001' --tab -t 'No.6 simu tdofdm' -e 'enter_project ip_drx_tdofdm 0001'"
+alias all="gnome-terminal --tab -t 'No.1 code ofdm' -e 'enter_project ip_drx_ofdm 0002' --active --tab -t 'No.2 code com' -e 'enter_project ip_drx_com 0001' --tab -t 'No.2 code iqm' -e 'enter_project ip_drx_iqm 0001' --tab -t 'No.2 code fft' -e 'enter_project ip_drx_fft 0002' --tab -t 'No.2 code fec' -e 'enter_project ip_drx_fec 0002'"
+
+#alias gmake='make'
+

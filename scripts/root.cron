@@ -1,0 +1,1 @@
+*/1 * * * * echo `date` > ~/cron.log; /proot/workareas/utils/project_manage/0001/access_control.sh >> ~/cron.log

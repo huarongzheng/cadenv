@@ -1,0 +1,64 @@
+#*********************************************************************
+#  Copyright (c) Vedacom Technology.
+#  $Source: /proot/.repository/utils/cadenv/users/HEAD/units/top/source/shell/cvs_log_tryout,v $
+#  $Author: herman $
+#  $Revision: 1.11 $
+#  $Date: 2010/07/24 07:44:49 $
+#  $State: Exp $
+#  $Name:  $
+#*********************************************************************
+#!/bin/bash
+./doinstall.tcl -nox /tools/tkcvs/tkcvs_8_2
+fuck
+fuck
+fuck
+fuck
+fuckrab=`find $1 -name $2`
+
+for arg in $rab
+do
+    echo "deleting $arg ..."
+    \rm -rf $arg
+done 
+print_help () {
+	echo "NAME"
+	echo "       create_project - create specified project and set environment variables accordingly"
+	echo "SYNOPSIS"
+    echo "       create_project project_name serial_name [--help] [--verbose]"
+    exit 1
+}
+
+parse_comand () {
+    arg_num=0
+    for arg_cnt in $(seq 1 $#)
+	do
+		eval arg=\${$arg_cnt}
+
+		case $arg in
+        --help|-h|-\?) 
+			arg_help=$arg_cnt
+			print_help
+            ;;
+		--verbose|-v) 
+
+#*********************************************************************
+#   History:
+#
+#   $Log: cvs_log_tryout,v $
+#   Revision 1.11  2010/07/24 07:44:49  herman
+#   Merge from 1.1.2.1.2.2
+#
+#   Revision 1.1.2.1.2.2  2010/07/24 06:13:41  herman
+#   dsdff
+#
+#   Revision 1.1.2.1.2.1  2010/07/24 06:04:48  herman
+#   nfk
+#
+#   Revision 1.1.2.1  2010/07/24 05:00:52  herman
+#   cvs_log_tryout
+#
+#   Revision 1.1  2010/07/24 03:41:00  herman
+#   initial revision
+#
+#*********************************************************************
+

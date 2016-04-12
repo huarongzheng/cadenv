@@ -1,0 +1,71 @@
+#XTerm*background:   #000000   
+#XTerm*foreground:   white   
+#XTerm*customization:   -color   
+#XTerm*toolBar:false   
+#XTerm*highlightSelection:     true   
+#XTerm*VT100*underLine:     on   
+#XTerm*VT100*colorMode:     on   
+#XTerm*VT100*dynamicColors:     on   
+#XTerm*VT100*colorAttrMode:   off   
+#XTerm*VT100*colorBDMode:     on   
+#XTerm*VT100*colorBD:     blue   
+#XTerm*VT100*colorULMode:     on   
+#XTerm*VT100*colorUL:     green   
+#XTerm*VT100*titeInhibit:     true   
+#  
+#XTerm.VT100*color0:   black   
+#XTerm.VT100*color1:   red3   
+#XTerm.VT100*color2:   green3   
+#XTerm.VT100*color3:   yellow3   
+#XTerm.VT100*color4:   blue3   
+#XTerm.VT100*color5:   magenta3   
+#XTerm.VT100*color6:   cyan3   
+#XTerm.VT100*color7:   gray90   
+#XTerm.VT100*color8:   gray30   
+#XTerm.VT100*color9:   red   
+#XTerm.VT100*color10:   green   
+#XTerm.VT100*color11:   yellow   
+#XTerm.VT100*color12:   blue   
+#XTerm.VT100*color13:   magenta   
+#XTerm.VT100*color14:   cyan   
+#XTerm.VT100*color15:   white   
+#XTerm.VT100*cursorColor:   lime   green  
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! RXVT setting
+Rxvt.background:lightyellow
+Rxvt.foreground:black
+Rxvt.colorBD:yellow
+Rxvt.colorUL:green
+Rxvt.multichar_encoding:gb2312
+Rxvt.scrollBar:True
+Rxvt.scrollBar_right:True
+Rxvt.scrollBar_floating: False
+Rxvt.scrollstyle: next
+Rxvt.saveLines:1500
+!!Rxvt.color0:black
+!!Rxvt.color1:red
+!!Rxvt.color2:#3a5da3
+!!Rxvt.color3:#4b76cc
+!!Rxvt.color4:RoyalBlue4
+!!Rxvt.color4:#123f75
+!!Rxvt.color5:magenta
+!!Rxvt.color6:#a1b5dd
+!!Rxvt.color7:#8a95aa
+!!Rxvt.color8:#616668
+!!Rxvt.color9:#075982
+!!Rxvt.color10:#0f82bc
+!!Rxvt.color11:#13a9f4
+Rxvt.color12:DodgerBlue
+!!Rxvt.color12:#3d99c6
+!!Rxvt.color13:#63c2f2
+!!Rxvt.color14:#6caccc
+!!Rxvt.color15:#dbeff9
+Rxvt.font:8x16
+!!Rxvt.font:-b&h-lucidatypewriter-medium-r-normal-*-14-*-*-*-*-*-iso8859-*
+Rxvt.mfont:-*-simsun-medium-r-normal-*-14-*-*-*-c-*-gb*-*
+Rxvt.menu:/etc/X11/rxvt.menu
+Rxvt.preeditType:Root
+Rxvt.geometry: 160x60+70+80
