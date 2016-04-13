@@ -1,18 +1,5 @@
-#*********************************************************************
-#  Copyright (c) Vedacom Technology.
-#  $Source: /proot/.repository/utils/cadenv/users/HEAD/units/top/source/shell/cvs_log_tryout,v $
-#  $Author: herman $
-#  $Revision: 1.11 $
-#  $Date: 2010/07/24 07:44:49 $
-#  $State: Exp $
-#  $Name:  $
-#*********************************************************************
 #!/bin/bash
 ./doinstall.tcl -nox /tools/tkcvs/tkcvs_8_2
-fuck
-fuck
-fuck
-fuck
 fuckrab=`find $1 -name $2`
 
 for arg in $rab
@@ -40,25 +27,4 @@ parse_comand () {
 			print_help
             ;;
 		--verbose|-v) 
-
-#*********************************************************************
-#   History:
-#
-#   $Log: cvs_log_tryout,v $
-#   Revision 1.11  2010/07/24 07:44:49  herman
-#   Merge from 1.1.2.1.2.2
-#
-#   Revision 1.1.2.1.2.2  2010/07/24 06:13:41  herman
-#   dsdff
-#
-#   Revision 1.1.2.1.2.1  2010/07/24 06:04:48  herman
-#   nfk
-#
-#   Revision 1.1.2.1  2010/07/24 05:00:52  herman
-#   cvs_log_tryout
-#
-#   Revision 1.1  2010/07/24 03:41:00  herman
-#   initial revision
-#
-#*********************************************************************
 

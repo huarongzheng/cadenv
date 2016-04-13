@@ -53,23 +53,3 @@ rm_rcs () {
 #   DISPLAY="$S_IP":0.0
 #   export DISPLAY
 #fi 
-
-# verbose option
-if [ "$SOURCE_VERBOSE" != "" ]; then
-    echo "Info: Sourcing $UTILS_CADENV/common_function"
-fi
-
-
-print_info () {
-    echo "Info: $*"
-}
-
-print_warning () {
-    echo "Warning: $*"
-}
-
-print_error () {
-    echo "Error: $*"
-}
-
-

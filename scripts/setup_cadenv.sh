@@ -1,12 +1,3 @@
-#*********************************************************************
-#  Copyright (c) Vedacom Technology.
-#  $Source: /proot/.repository/utils/cadenv/users/HEAD/units/top/source/shell/setup_cadenv.sh,v $
-#  $Author: herman $
-#  $Revision: 1.9 $
-#  $Date: 2010/10/09 11:51:23 $
-#  $State: Exp $
-#  $Name:  $
-#*********************************************************************
 #!/bin/bash
 
 if [ "$1" != "" ]; then
@@ -78,21 +69,4 @@ setup_user.sh herman vedacom /bin/bash
 #####################################
 cp -r /proot/workareas/utils/genmake/users/herman/units/top/source/ /tools/genmake
 cd /tools/genmake/msc_source
-
-
-
-#*********************************************************************
-#   History:
-#
-#   $Log: setup_cadenv.sh,v $
-#   Revision 1.9  2010/10/09 11:51:23  herman
-#   change log fix
-#
-#   Revision 1.8  2010/08/08 10:29:57  herman
-#   this version was checked in erronously
-#
-#   Revision 1.7  2010/07/24 07:54:17  herman
-#   change cvs log template
-#
-#*********************************************************************
 

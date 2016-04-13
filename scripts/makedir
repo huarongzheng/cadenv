@@ -1,12 +1,3 @@
-#*********************************************************************
-#  Copyright (c) Vedacom Technology.
-#  $Source: /proot/.repository/utils/cadenv/users/HEAD/units/top/source/shell/makedir,v $
-#  $Author: herman $
-#  $Revision: 1.3 $
-#  $Date: 2010/07/24 07:54:17 $
-#  $State: Exp $
-#  $Name:  $
-#*********************************************************************
 #!/usr/bin/tclsh
 
 proc makedir { pathname } {
@@ -23,12 +14,3 @@ proc makedir { pathname } {
 }
 
 makedir $argv
-
-#*********************************************************************
-#   History:
-#
-#   $Log: makedir,v $
-#   Revision 1.3  2010/07/24 07:54:17  herman
-#   change cvs log template
-#
-#*********************************************************************

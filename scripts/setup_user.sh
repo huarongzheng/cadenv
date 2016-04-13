@@ -1,12 +1,3 @@
-#*********************************************************************
-#  Copyright (c) Vedacom Technology.
-#  $Source: /proot/.repository/utils/cadenv/users/HEAD/units/top/source/shell/setup_user.sh,v $
-#  $Author: herman $
-#  $Revision: 1.4 $
-#  $Date: 2010/07/24 07:54:17 $
-#  $State: Exp $
-#  $Name:  $
-#*********************************************************************
 #!/bin/bash
 
 print_usage () {
@@ -82,13 +73,4 @@ if [[ "$GROUP_INFO" == "$USER_NAME" && "$GROUP_INFO" != "root" ]]; then
     echo "INFO: group: $USER_NAME is redundant, deleting ..."
     groupdel $USER_NAME
 fi
-
-#*********************************************************************
-#   History:
-#
-#   $Log: setup_user.sh,v $
-#   Revision 1.4  2010/07/24 07:54:17  herman
-#   change cvs log template
-#
-#*********************************************************************
 
