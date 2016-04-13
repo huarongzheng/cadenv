@@ -26,6 +26,7 @@ alias ot 'octave -qf'
 alias ep 'enter_project'
 
 alias rd 'rdesktop -g1390x970'
+alias eclipse eclipse -vm java
 
 #### myself command
 alias ccsswan '/tools/utils/cadenv/bin/ccss -cadenv-wan'
