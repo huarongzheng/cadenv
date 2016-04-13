@@ -1,0 +1,18 @@
+[user]
+	name = huarongzheng
+[user]
+	email = chauviner@hotmail.com
+[credential]
+        helper = cache --timeout=28800
+[http]
+        sslVerify = false
+[diff]
+        tool = bc 
+[difftool "bc"]
+        cmd = /home/ronz/bin/beyondcompare $LOCAL $REMOTE
+[difftool]
+        prompt = false
+[mergetool "bc"]
+    cmd = /home/ronz/bin/beyondcompare $LOCAL $REMOTE $BASE $MERGED
+[mergetool]
+    prompt = false
