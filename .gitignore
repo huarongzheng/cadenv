@@ -1,2 +1,6 @@
 # vim
 settings/.vim/view/*
+
+# others
+scripts/nv/p4*
+scripts/nv/recover_screen
