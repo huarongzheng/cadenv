@@ -3,16 +3,16 @@
 [user]
 	email = chauviner@hotmail.com
 [credential]
-        helper = cache --timeout=28800
+    helper = cache --timeout=28800
 [http]
-        sslVerify = false
+    sslVerify = false
 [diff]
-        tool = bc 
-[difftool "bc"]
-        cmd = /home/ronz/bin/beyondcompare $LOCAL $REMOTE
+    tool = meld 
+#[difftool "kompare"]
+#    cmd = kompare $LOCAL $REMOTE
 [difftool]
-        prompt = false
-[mergetool "bc"]
-    cmd = /home/ronz/bin/beyondcompare $LOCAL $REMOTE $BASE $MERGED
+    prompt = false
+#[mergetool "kompare"]
+#    cmd = kompare $LOCAL $REMOTE $BASE $MERGED
 [mergetool]
     prompt = false

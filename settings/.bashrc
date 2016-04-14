@@ -82,15 +82,15 @@ fi
 #----------------------------
 #     load tools     
 #----------------------------
-eval `tclsh /tools/modules/tcl/modulecmd.tcl sh autoinit`
-module load promanage
-module load cadenv
-module load ccss
-module load vim
-module load tkcvs
-module load genmake/2.1
-module load build_drxmap/1.10
-module load eclipse/indigo-SR1
+#eval `tclsh /home/utils/modules/tcl/modulecmd.tcl sh autoinit`
+#module load promanage
+#module load cadenv
+#module load ccss
+#module load vim
+#module load tkcvs
+#module load genmake/2.1
+#module load build_drxmap/1.10
+#module load eclipse/indigo-SR1
 
 
 ################ cvs
