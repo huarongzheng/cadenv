@@ -8,8 +8,13 @@ set backspace=indent,eol,start
 set ruler  " show the cursor position all the time
 set showcmd "display icomplete commands 
 set incsearch
-set cursorline
+"set cursorline
 set cursorcolumn
+"set spell
+
+"set ignorecase
+"set nowrap
+set hlsearch      "set high light search
 
 "set color scheme
 "set t_Co=256
@@ -21,19 +26,14 @@ colorscheme default
 "colorscheme peachpuff
 
 set backspace=2 "sel the flexibility of Backspace<BS> and Delete
-
 set mouse=a  "set mouse function
-
 set tabstop=4 "set tap width
-
 set shiftwidth=4 "set auto shift width
-
 set smartindent "set smart indent
+filetype plugin indent on
 
 syntax enable
 syntax on
-
-set hlsearch      "set high light search
 
 filetype on "detect the type of file
 
@@ -45,17 +45,11 @@ set showmatch "show matching brackets
 
 set expandtab
 
-"set spell
-set showmatch
-set incsearch
-"set ignorecase
-"set nowrap
-set cursorline
-if has("unnamedplus")
-  set clipboard=unnamedplus
-elseif has("clipboard")
-  set clipboard=unnamed
-endif
+"if has("unnamedplus")
+"  set clipboard=unnamedplus
+"elseif has("clipboard")
+set clipboard=unnamed
+"endif
 
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 au BufRead,BufNewFile *.vx setfiletype verilog
@@ -65,24 +59,48 @@ au BufRead,BufNewFile *.chc setfiletype c
 """"""""""""""""""""""""""""""""""""""""""
 "  Plugins
 """"""""""""""""""""""""""""""""""""""""""
-""""""""""""  TagList """"""""""""
-let Tlist_Show_One_File=1
-let Exit_OnlyWindow=1
+""""""""""""" ctags """"""""""""""""""
 set tags=$CMOD_TOP/tags
-filetype plugin indent on
-set completeopt=longest,menu
-autocmd BufWritePost *.cpp :TlistUpdate
+"map <C-_><F12> :!cd $CMOD_TOP;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .;cscope -Rbq<CR>
+map <C-_><F12> :!cd $CMOD_TOP;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .;
+nmap <F5> :vertical stjump 
+"nmap <F6> :vertical stag 
+nmap <c-\> :tn<cr>
+nmap <c-p> :tp<cr>
+set splitright
+"set splitbelow
+"" configure tags - add additional tags here or comment out not-used ones
+"set tags+=~/.vim/tags/cpp
+"set tags+=~/.vim/tags/gl
+"set tags+=~/.vim/tags/sdl
+"set tags+=~/.vim/tags/qt4
+"" build tags of your own project with Ctrl-F12
+
 """"""""""""  Cscope """"""""""""
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 cs add $CMOD_TOP/cscope.out $CMOD_TOP
+"Find this C symbol: func name, macros, enum etc
 nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+"Find this definition
 nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+"Find functions calling this function
 nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+"Find assignments to
 nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+"Find this egrep pattern
 nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+"Find this file
 nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+"Find files #including this file
 nmap <C-_>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+"Find functions called by this function
 nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+""""""""""""  TagList """"""""""""
+let Tlist_Show_One_File=1
+let Exit_OnlyWindow=1
+set completeopt=longest,menu
+autocmd BufWritePost *.cpp :TlistUpdate
 
 """"""""""" WinManager """""""""""
 let g:winManagerWindowLayout='FileExplorer|TagList'
@@ -96,8 +114,8 @@ map <c-w><c-f> :FirstExplorerWindow<cr>
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
-nmap <F6> :cn<cr>
-nmap <F7> :cp<cr>
+"nmap <F6> :cn<cr>
+"nmap <F7> :cp<cr>
 
 """""""" A Auto-open .h file """"""""""
 nnoremap <silent> <F4> :A<CR> 
@@ -106,15 +124,6 @@ nnoremap <silent> <F4> :A<CR>
 nnoremap <silent> <F3> :Grep<CR>
 
 """""""  New-Omni-Completion """"""""
-filetype plugin indent on
-map <C-_><F12> :!cd $CMOD_TOP;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .;cscope -Rbq<CR>
-"" configure tags - add additional tags here or comment out not-used ones
-"set tags+=~/.vim/tags/cpp
-"set tags+=~/.vim/tags/gl
-"set tags+=~/.vim/tags/sdl
-"set tags+=~/.vim/tags/qt4
-"" build tags of your own project with Ctrl-F12
-
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
 let OmniCpp_GlobalScopeSearch = 1

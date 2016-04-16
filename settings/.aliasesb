@@ -36,4 +36,4 @@ alias tdofdm="gnome-terminal --tab -t 'No.1 code tdofdm' -e 'enter_project ip_dr
 alias all="gnome-terminal --tab -t 'No.1 code ofdm' -e 'enter_project ip_drx_ofdm 0002' --active --tab -t 'No.2 code com' -e 'enter_project ip_drx_com 0001' --tab -t 'No.2 code iqm' -e 'enter_project ip_drx_iqm 0001' --tab -t 'No.2 code fft' -e 'enter_project ip_drx_fft 0002' --tab -t 'No.2 code fec' -e 'enter_project ip_drx_fec 0002'"
 
 #alias gmake='make'
-
+alias eip='source eip.sh '

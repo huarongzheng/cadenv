@@ -60,8 +60,11 @@ export AUTO_PROMPT_COLOR_PATH=35
 export AUTO_PROMPT_COLOR_COUNT=35
 export AUTO_PROMPT_COLOR_DOLLAR=35
 
+set autocorrect
 set autolist
-
+set autoexpand
+set complete
+set color
 
 #----------------------------
 #        aliases
@@ -97,6 +100,8 @@ fi
 export CVSROOT=:local:/proot/.repository
 export EDITOR=vim
 export CVS_RSH=ssh
+
+export PATH=/proot/cadenv/scripts:$PATH
 
 #export DISPLAY=$HOSTNAME:0.0
 #export mdd_env_version=1.1
