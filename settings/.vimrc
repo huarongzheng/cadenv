@@ -61,8 +61,7 @@ au BufRead,BufNewFile *.chc setfiletype c
 """"""""""""""""""""""""""""""""""""""""""
 """"""""""""" ctags """"""""""""""""""
 set tags=$CMOD_TOP/tags
-"map <C-_><F12> :!cd $CMOD_TOP;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .;cscope -Rbq<CR>
-map <C-_><F12> :!cd $CMOD_TOP;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .;
+map <C-_><F12> :!cd $CMOD_TOP;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .;cscope -Rbq<CR>
 nmap <F5> :vertical stjump 
 "nmap <F6> :vertical stag 
 nmap <c-\> :tn<cr>
