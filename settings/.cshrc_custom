@@ -1,0 +1,74 @@
+
+# $Id: .cshrc_custom,v 1.7 2015/10/27 02:49:12 ronz Exp $
+
+########################################
+# CUSTOM ALIASES
+########################################
+
+########################################
+# CUSTOM ENV VARIABLES
+########################################
+#/home/nv/bin/envupdate -c
+
+########################################
+# CUSTOM PATHS
+########################################
+
+# the ":q" suffix in $path quotes the previous path names, so we can handle
+# path directories that contain spaces.
+
+set path = ( \
+    /home/edwardc/tmux/bin \
+    #/home/utils/gcc-4.1.0/bin \
+ 	$path:q \
+ )
+setenv EDITOR vim
+setenv PROOT         /home/scratch.ronz_maxwell/proot
+setenv CADENV        $PROOT/cadenv
+setenv SCRIPT        $PROOT/cadenv/scripts
+setenv PERL_INC_PATH $SCRIPT
+setenv PATH $PROOT/cadenv/scripts:$PATH
+setenv PATH $SCRIPT/nv:$PATH
+setenv PATH /home/scratch.ronz_maxwell/fullchip_tree1/sw/main/apps/p4review:$PATH
+setenv PATH /home/scratch.ronz_maxwell/tree2/hw/nvgpu_display/ip/display/nvdisplay/2.0/disp_scripts:$PATH
+setenv PATH /home/utils/codelite-8.0-1/bin:$PATH
+setenv PATH /home/utils/firefox-35.1.0esr:$PATH
+setenv PATH /home/utils/git-2.7.1/bin:$PATH
+setenv PATH /home/utils/docker-1.5/bin:$PATH
+setenv PATH /home/utils/automake-1.14/bin:$PATH
+setenv PATH /home/utils/autoconf-2.69/bin:$PATH
+setenv PATH /home/utils/libtool-2.4.2/bin:$PATH
+setenv PATH /home/utils/gdb-7.9/bin:$PATH
+setenv PYTHONPATH /home/scratch.ronz_maxwell/proot/caffe/python
+#setenv PERL_PRINT_LEVEL 3  #0~7 I expect
+
+
+
+#setenv CPLUS_INCLUDE_PATH /home/utils/boost-1.60.0/include
+#setenv CPLUS_INCLUDE_PATH /home/ronz/tools/protobuf-3.0.0-beta-2/include:$CPLUS_INCLUDE_PATH
+#setenv CPLUS_INCLUDE_PATH /home/ronz/tools/atlas-3.10.2/include:$CPLUS_INCLUDE_PATH
+#setenv CPLUS_INCLUDE_PATH /home/ronz/tools/gflags/include:$CPLUS_INCLUDE_PATH
+#setenv CPLUS_INCLUDE_PATH /home/ronz/tools/glog/include:$CPLUS_INCLUDE_PATH
+#setenv CPLUS_INCLUDE_PATH /home/ronz/tools/hd5/include:$CPLUS_INCLUDE_PATH
+
+
+#setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH\:/home/edwardc/tmux/lib
+#setenv LD_LIBRARY_PATH /home/utils/gcc-5.3.0/lib64:$LD_LIBRARY_PATH 
+#setenv LD_LIBRARY_PATH /home/ronz/tools/protobuf-2.5.0/lib:$LD_LIBRARY_PATH 
+#setenv LD_LIBRARY_PATH /home/ronz/tools/glog/lib:$LD_LIBRARY_PATH 
+#setenv LD_LIBRARY_PATH /home/ronz/tools/gflags/lib:$LD_LIBRARY_PATH 
+#setenv LD_LIBRARY_PATH /home/ronz/tools/hd5/lib:$LD_LIBRARY_PATH 
+#setenv LD_LIBRARY_PATH /home/ronz/tools/lmdb/lib:$LD_LIBRARY_PATH 
+#setenv LD_LIBRARY_PATH /home/utils/boost-1.60.0/lib:$LD_LIBRARY_PATH 
+
+# DO NOT DELETE BELLOW UNLESS THE TREE WAS REMOVED#
+#source /home/scratch.ronz_maxwell/gpuip_tree1/hw/gpu_ip/display/class027x/./bin/gpu_ip_alias
+source /home/scratch.nvdisplay/PROJECTS/tree_misc_template/GPU_alias/display_standard_alias
+# DO NOT DELETE ABOVE UNLESS THE TREE WAS REMOVED#
+
+if ($?prompt) then
+    if ( -e ~/bin/zsh) then
+        exec ~/bin/zsh -l
+    endif
+endif
+

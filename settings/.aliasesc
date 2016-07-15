@@ -25,7 +25,6 @@ alias xe 'xemacs'
 alias ot 'octave -qf'
 alias ep 'enter_project'
 
-alias rd 'rdesktop -g1390x970'
 alias eclipse eclipse -vm java
 
 #### myself command
@@ -36,4 +35,38 @@ alias ofdm "gnome-terminal --tab -t 'No.1 code ofdm' -e 'enter_project ip_drx_of
 alias tdofdm "gnome-terminal --tab -t 'No.1 code tdofdm' -e 'enter_project ip_drx_tdofdm 0001' --active --tab -t 'No.2 code tdofdm' -e 'enter_project ip_drx_tdofdm 0001'  --tab -t 'No.3 bench tdofdm' -e 'enter_project ip_drx_tdofdm 0001' --tab -t 'No.4 bench tdofdm' -e 'enter_project ip_drx_tdofdm 0001' --tab -t 'No.5 simu tdofdm' -e 'enter_project ip_drx_tdofdm 0001' --tab -t 'No.6 simu tdofdm' -e 'enter_project ip_drx_tdofdm 0001'"
 #alias gmake 'make'
 
+alias eip 'source /home/scratch.ronz_maxwell/proot/cadenv/scripts/nv/enter_nv_ip'
+alias imgcmp '`depth`/bin/imgcmp'
+alias imgdump 'setenv NVD_FMOD_IMAGE_DUMP YES'
+alias makeppm '`depth`/bin/Linux/makeppm'
+#alias glivd '$ROT/hw/tools/imgtools/bin/glivd'
+alias dpsink '$WORKAREA/tools/display/dpsink/dpsink'
+#alias qverdi 'qsub -q o_pri_interactive_cpu_16G nvmk -c . verdi TINYDISPLAYBUILD=1' # cd $WORKAREA/stand_sim/disp/drtl first $WORKAREA/stand_sim/disp/tb/gm204_111_Linux
+alias qverdi 'cd $WORKAREA/stand_sim/disp/drtl/gp107d_Linux; qsub -q o_pri_interactive_cpu_16G -Is /home/tools/debussy/verdi3_201309/bin/verdi -ssy -ssv -nologo  -f   tb_disp.vc' # cd $WORKAREA/stand_sim/disp/drtl
+alias qverdif 'cd $WORKAREA/stand_sim/disp/tb/gp104_Linux_x86_64; qsub -q o_pri_interactive_cpu_16G -Is /home/tools/debussy/verdi3_201309/bin/verdi -ssy -ssv -nologo  -f   tb_disp_all.vc' # cd $WORKAREA/stand_sim/disp/tb/gm204_111_Linux
+#qsub -P kepler -q o_pri_interactive_cpu_8G -Is /home/tools/debussy/verdi_200901/bin/verdi -ssy -ssv -nologo -f tb_disp.vc
+alias batch_status '$WORKAREA/inf/testgen/2.1/bin/batch_status'
+alias getmk 'cp /home/ronz/proot/workareas/utils/nv/users/ronz/untis/script/source/makefile_rundisplay'
+alias getgpumk 'cp /home/scratch.ronz_maxwell/proot/cadenv/scripts/nv/makefile_rungpu'
+alias getnvdmk 'cp /home/ronz/proot/workareas/utils/nv/users/ronz/untis/script/source/makefile_runnvdisplay'
+alias forge /home/nv/utils/forge/releases/1.0.luna/bin/forge.pl -project hw_mmplex_display
+alias p4rhw "env P4PORT=p4hw:2001 p4review.pl -p4port p4hw:2001 -save -server -uploadcmd 'curl -u svcsw:Gforcetop#2 --upload-file'"
+alias p4rsw "env P4PORT=p4sw:2006 p4review.pl -p4port p4sw:2006 -save -server -uploadcmd 'curl -u svcsw:Gforcetop#2 --upload-file'"
+alias p4rlocal "p4review.pl -save -ir"
+alias p4rmerge "p4rmerge.pl --downloadcmd='curl -u svcsw:Gforcetop#2 -O' -server"
+alias mutta 'echo "file from sc server"| mutt -a \!* -s "\!*" ronz@@nvidia.com'
+
+alias lq "list_queues"
+alias qsub4   "qsub -q o_pri_interactive_cpu_4G   -P hw_mmplex_display"
+alias qsub8   "qsub -q o_pri_interactive_cpu_8G   -P hw_mmplex_display" 
+alias qsub16  "qsub -q o_pri_interactive_cpu_16G  -P hw_mmplex_display"
+alias qsub128 "qsub -q o_pri_cpu_128G             -P hw_mmplex_display"
+alias qsub256 "qsub -q o_pri_cpu_256G             -P hw_mmplex_display"
+alias gt "gnome-terminal --tab -t 'class' --tab -t 'ref'  --tab -t 'defs' --tab -t 'inc' --tab -t 'fmod' --tab -t 'session' --tab -t 'session' --tab -t 'build' --active --tab -t 'sw' --tab -t 'sw'"
+
+unalias make; alias make 'set make = "make"; if ( -e "`depth`/bin/make" ) set make = "`depth`/bin/make"; $make'
+unalias make; alias make /home/utils/make-3.82/bin/make
+unalias p4; alias p4 '/home/nv/utils/crucible/1.0/bin/p4 -d `/bin/pwd`'
+
+alias opt "gnome-terminal --tab -t 'class' --active --tab -t 'manual' --tab -t 'defs' --tab -t 'include' --tab -t 'fmod' --tab -t 'fmod' --tab -t 'fmod' --tab -t 'fmod' --tab -t 'session' --tab -t 'session' --tab -t 'session' --tab -t 'test' --tab -t 'test' --tab -t 'test' --tab -t 'test' --tab -t 'build'"
 
