@@ -1,31 +1,16 @@
 #!/bin/bash
 #### Aliases
 alias m='more'
-alias k='kwrite'
-alias oo='openoffice.org'
-alias h=history
 alias cp='cp -r'
 alias rm='\rm -rf'
 alias su='su -l'
-alias l='ls --color'
-alias la='ls -a --color'
-alias ll='ls -la --color'
-alias lla='ls -la --color'
-alias llg='ls -lg --color'
-alias lsd='ls -l --color | grep ^d'
-alias lad='ls -a --color -F | grep /'
-alias lld='ls -l --color | grep ^d'
-alias llad='ls -la --color | grep ^d'
-alias llgd='ls -lg --color | grep ^d'
-alias msd='auto_msd'
-alias gz='gzip'
+alias l='ls -a -G'
+alias ll='ls -la -G'
+alias lld='ls -la -G | grep ^d'
 alias vi=vim
-alias e='emacs'
-alias xe='xemacs'
-alias ot='octave -qf'
-alias ep='enter_project'
-
 alias rd='rdesktop -g1390x970'
+alias ot='octave -qf'
+alias oo='openoffice.org'
 
 #### my command
 alias ccsswan='/tools/utils/cadenv/bin/ccss -cadenv-wan'
@@ -36,4 +21,5 @@ alias tdofdm="gnome-terminal --tab -t 'No.1 code tdofdm' -e 'eip tree1 nvdisplay
 alias all="gnome-terminal --tab -t 'No.1 code ofdm' -e 'enter_project ip_drx_ofdm 0002' --active --tab -t 'No.2 code com' -e 'enter_project ip_drx_com 0001' --tab -t 'No.2 code iqm' -e 'enter_project ip_drx_iqm 0001' --tab -t 'No.2 code fft' -e 'enter_project ip_drx_fft 0002' --tab -t 'No.2 code fec' -e 'enter_project ip_drx_fec 0002'"
 alias gt="gnome-terminal --tab -t 'class' --tab -t 'ref'  --tab -t 'defs' --tab -t 'inc' --tab -t 'fmod' --tab -t 'session' --tab -t 'session' --tab -t 'build' --active --tab -t 'sw' --tab -t 'sw'"
 
-source /home/scratch.nvdisplay/PROJECTS/tree_misc_template/GPU_alias/display_standard_aliasb
+alias msd='auto_msd'
+alias ep='enter_project'
