@@ -1,13 +1,3 @@
-# verbose option
-if [ "$SOURCE_VERBOSE" != "" ]; then
-    echo "Info: Sourcing $HOME/.bashrc"
-fi
-
-# source ~/.cshrclocal
-if [ -f ~/.bashrclocal ];then
-    source ~/.bashrclocal
-fi
-
 #----------------------------
 #         Prompt & bashell 
 #----------------------------
@@ -66,47 +56,8 @@ set autoexpand
 set complete
 set color
 
-#----------------------------
-#        aliases
-#----------------------------
-if [ "$BASH_VERSION" != "" ]; then
-    ##### aliases 
-    if [ -f ~/.aliasesb  ]; then
-        source ~/.aliasesb
-    fi
-    ##### Completions newer bashes
-	if [ ${BASH_VERSINFO[1]%%[a-z]} -gt 3 ]; then
-		LIST=`ypcat hosts | /bin/sed -e 's/^[0-9.]*[^a-z]*\([a-z]*\)\..*$/\1/' | tr '\012' ' '`
-		complete -W "$LIST" rlogin rsh
-        FIGNORE=CVS
-	fi
+
+if [ -f ~/.localrc ];then
+    source ~/.localrc
 fi
-
-#----------------------------
-#     load tools     
-#----------------------------
-#eval `tclsh /home/utils/modules/tcl/modulecmd.tcl sh autoinit`
-#module load promanage
-#module load cadenv
-#module load ccss
-#module load vim
-#module load tkcvs
-#module load genmake/2.1
-#module load build_drxmap/1.10
-#module load eclipse/indigo-SR1
-
-
-################ cvs
-export CVSROOT=:local:/proot/.repository
-export EDITOR=vim
-export CVS_RSH=ssh
-
-export PATH=/proot/cadenv/scripts:$PATH
-
-#export DISPLAY=$HOSTNAME:0.0
-#export mdd_env_version=1.1
-#export AUTO_MSD_VERSION=1.28.2
-#export AUTO_UMASK=0002
-
-#mount -o shortname=mixed //192.168.1.3/public /mnt/samba_u1-nas
 
