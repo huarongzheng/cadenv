@@ -1,13 +1,19 @@
 ########################################
-# CUSTOM ALIASES
-########################################
-
-########################################
 # CUSTOM ENV VARIABLES
 ########################################
 #/home/nv/bin/envupdate -c
 
-########################################
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+## Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+
+#######################################
 # CUSTOM PATHS
 ########################################
 
@@ -19,7 +25,6 @@ path=(
  	$path
 )
 
-export EDITOR=vim
 export PROOT=/home/scratch.ronz_maxwell/proot
 export CADENV=$PROOT/cadenv
 export SCRIPT=$PROOT/cadenv/scripts
@@ -61,10 +66,4 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib
 #setenv LD_LIBRARY_PATH /home/ronz/tools/hd5/lib:$LD_LIBRARY_PATH 
 #setenv LD_LIBRARY_PATH /home/ronz/tools/lmdb/lib:$LD_LIBRARY_PATH 
 #setenv LD_LIBRARY_PATH /home/utils/boost-1.60.0/lib:$LD_LIBRARY_PATH 
-
-# DO NOT DELETE BELLOW UNLESS THE TREE WAS REMOVED#
-#source /home/scratch.nvdisplay/PROJECTS/tree_misc_template/GPU_alias/display_standard_alias
-# DO NOT DELETE ABOVE UNLESS THE TREE WAS REMOVED#
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
-bindkey '^s' autosuggest-clear
 
