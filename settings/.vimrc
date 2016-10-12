@@ -11,7 +11,7 @@ set incsearch
 "set cursorline
 set cursorcolumn
 "set spell
-
+"set autochdir
 "set ignorecase
 "set nowrap
 set hlsearch      "set high light search
@@ -60,11 +60,11 @@ au BufRead,BufNewFile *.chc setfiletype c
 "  Plugins
 """"""""""""""""""""""""""""""""""""""""""
 """"""""""""" ctags """"""""""""""""""
-set tags=$CMOD_TOP/tags
-map <C-_><F12> :!cd $CMOD_TOP;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --verbose --exclude="g*_Linux_x86*" --extra=+q .;cscope -Rbq<CR>
+set tags=$CMOD_TOP/tags,$TREE_TRACE/tags
+map <C-_><F12> :!cd $CMOD_TOP;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --exclude="g*_Linux_x86*" --exclude="vmod*" --exclude="syn" --exclude="gpu" --exclude="tool*" --exclude="*uvm*" --exclude="diag*" --extra=+q .;cscope -Rbq<CR>
 nmap <F5> :vertical stjump 
 "nmap <F6> :vertical stag 
-nmap <c-\> :tn<cr>
+nmap <c-o> :tn<cr>
 nmap <c-p> :tp<cr>
 set splitright
 "set splitbelow

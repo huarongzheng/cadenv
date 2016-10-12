@@ -25,9 +25,11 @@ export CADENV=$PROOT/cadenv
 export SCRIPT=$PROOT/cadenv/scripts
 export PERL_INC_PATH=$SCRIPT
 export PATH=$PROOT/cadenv/scripts:$PATH
+export PATH=/lib:$PATH
 export PATH=$SCRIPT/nv:$PATH
 export PATH=/home/scratch.ronz_maxwell/fullchip_tree1/sw/main/apps/p4review:$PATH
 export PATH=/home/scratch.ronz_maxwell/tree2/hw/nvgpu_display/ip/display/nvdisplay/2.0/disp_scripts:$PATH
+export PATH=/home/scratch.ronz_maxwell/proot/cadenv/scripts/nv:$PATH
 export PATH=/home/utils/codelite-8.0-1/bin:$PATH
 export PATH=/home/utils/firefox-35.1.0esr:$PATH
 export PATH=/home/utils/git-2.7.1/bin:$PATH
@@ -50,6 +52,7 @@ export PYTHONPATH=/home/scratch.ronz_maxwell/proot/caffe/python
 #setenv CPLUS_INCLUDE_PATH /home/ronz/tools/hd5/include:$CPLUS_INCLUDE_PATH
 
 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib
 #setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH\:/home/edwardc/tmux/lib
 #setenv LD_LIBRARY_PATH /home/utils/gcc-5.3.0/lib64:$LD_LIBRARY_PATH 
 #setenv LD_LIBRARY_PATH /home/ronz/tools/protobuf-2.5.0/lib:$LD_LIBRARY_PATH 
@@ -64,5 +67,4 @@ export PYTHONPATH=/home/scratch.ronz_maxwell/proot/caffe/python
 # DO NOT DELETE ABOVE UNLESS THE TREE WAS REMOVED#
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
 bindkey '^s' autosuggest-clear
-bindkey '^x' autosuggest-execute
 
