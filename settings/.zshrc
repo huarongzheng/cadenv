@@ -51,9 +51,11 @@ ZSH_THEME="kphoen"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git autojump autopep8 pep8 python sudo zsh-autosuggestions)
-
 # User configuration
-source $ZSH/oh-my-zsh.sh
+if [[ -a $ZSH/oh-my-zsh.sh ]]; then
+    source $ZSH/oh-my-zsh.sh
+fi
+
 if [[ -a ~/.localrc ]]; then
     source ~/.localrc
 fi
