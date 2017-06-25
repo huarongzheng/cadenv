@@ -8,8 +8,6 @@ set backspace=indent,eol,start
 set ruler  " show the cursor position all the time
 set showcmd "display icomplete commands 
 set incsearch
-"set cursorline
-set cursorcolumn
 "set spell
 "set autochdir
 "set ignorecase
@@ -18,12 +16,15 @@ set hlsearch      "set high light search
 
 "set color scheme
 "set t_Co=256
-set background=dark
-colorscheme default
+"set background=dark
+"colorscheme default
 "colorscheme darkblue
 "colorscheme evening
+"
+"
 "colorscheme morning
 "colorscheme peachpuff
+colorscheme koehler
 
 set backspace=2 "sel the flexibility of Backspace<BS> and Delete
 set mouse=a  "set mouse function
@@ -34,6 +35,12 @@ filetype plugin indent on
 
 syntax enable
 syntax on
+
+
+set cursorline
+set cursorcolumn
+hi cursorline cterm=NONE ctermbg=lightblue guibg=darkred guifg=white
+hi cursorcolumn cterm=NONE ctermbg=lightblue guibg=darkred guifg=white
 
 filetype on "detect the type of file
 
@@ -61,19 +68,20 @@ au BufRead,BufNewFile *.chc setfiletype c
 """"""""""""""""""""""""""""""""""""""""""
 """"""""""""" ctags """"""""""""""""""
 set tags=$CMOD_TOP/tags,$TREE_TRACE/tags
-map <C-_><F12> :!cd $CMOD_TOP;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --exclude="g*_Linux_x86*" --exclude="vmod*" --exclude="syn" --exclude="gpu" --exclude="tool*" --exclude="*uvm*" --exclude="diag*" --extra=+q .;cscope -Rbq<CR>
-nmap <F5> :vertical stjump 
-"nmap <F6> :vertical stag 
-nmap <c-o> :tn<cr>
-nmap <c-p> :tp<cr>
-set splitright
-"set splitbelow
 "" configure tags - add additional tags here or comment out not-used ones
 "set tags+=~/.vim/tags/cpp
 "set tags+=~/.vim/tags/gl
 "set tags+=~/.vim/tags/sdl
 "set tags+=~/.vim/tags/qt4
 "" build tags of your own project with Ctrl-F12
+nmap <C-_><F12> :!cd $CMOD_TOP;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --exclude="g*_Linux_x86*" --exclude="vmod*" --exclude="syn" --exclude="gpu" --exclude="tool*" --exclude="*uvm*" --exclude="diag*" --extra=+q .;cscope -Rbq<CR>
+nmap <F5> :vertical stjump 
+"nmap <F6> :vertical stag 
+nmap <F7> :ts
+nmap <c-o> :tn<cr>
+nmap <c-p> :tp<cr>
+set splitright
+"set splitbelow
 
 """"""""""""  Cscope """"""""""""
 set cscopequickfix=s-,c-,d-,i-,t-,e-
@@ -162,3 +170,7 @@ let g:HiMtchBrktOn= 1
 :map <M-Esc>[65~ <S-MouseUp>
 :map! <M-Esc>[65~ <S-MouseUp>
 
+"""""""""""""""""""""""""""""
+" replace tab with space
+"""""""""""""""""""""""""""""
+"just use    :retab

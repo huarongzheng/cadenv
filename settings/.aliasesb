@@ -14,7 +14,8 @@ alias oo='openoffice.org'
 
 #### my command
 alias ccsswan='/tools/utils/cadenv/bin/ccss -cadenv-wan'
-
+# check /usr/X11R6/lib/X11/xkb/rules/base.lst
+alias jp106="setxkbmap -model jp106 -layout jp"
 alias ofdm="gnome-terminal --tab -t 'No.1 code ofdm' -e 'enter_project ip_drx_ofdm 0002' --active --tab -t 'No.2 code ofdm' -e 'enter_project ip_drx_ofdm 0002'  --tab -t 'No.3 bench ofdm' -e 'enter_project ip_drx_ofdm 0002' --tab -t 'No.4 bench ofdm' -e 'enter_project ip_drx_ofdm 0002' --tab -t 'No.5 simu ofdm' -e 'enter_project ip_drx_ofdm 0002' --tab -t 'No.6 simu ofdm' -e 'enter_project ip_drx_ofdm 0002'"
 alias com="gnome-terminal --tab -t 'No.1 code com' -e 'enter_project ip_drx_com 0001' --active --tab -t 'No.2 code com' -e 'enter_project ip_drx_com 0001'"
 alias tdofdm="gnome-terminal --tab -t 'No.1 code tdofdm' -e 'eip tree1 nvdisplay' --active"
@@ -22,4 +23,6 @@ alias all="gnome-terminal --tab -t 'No.1 code ofdm' -e 'enter_project ip_drx_ofd
 alias gt="gnome-terminal --tab -t 'class' --tab -t 'ref'  --tab -t 'defs' --tab -t 'inc' --tab -t 'fmod' --tab -t 'session' --tab -t 'session' --tab -t 'build' --active --tab -t 'sw' --tab -t 'sw'"
 
 alias msd='auto_msd'
-alias ep='enter_project'
+alias eip='/home/scratch.ronz_maxwell/proot/cadenv/scripts/nv/enter_nv_ip_log'
+source /home/scratch.nvdisplay/PROJECTS/tree_misc_template/GPU_alias/display_standard_aliasb  
+

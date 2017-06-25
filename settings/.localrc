@@ -17,7 +17,7 @@ fi
 #/home/nv/bin/envupdate -c
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 ## Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -57,6 +57,7 @@ export PATH=/home/utils/autoconf-2.69/bin:$PATH
 export PATH=/home/utils/libtool-2.4.2/bin:$PATH
 export PATH=/home/utils/gdb-7.9/bin:$PATH
 export PATH=/home/utils/autojump_v21.1.2/bin:$PATH
+export PATH=/home/utils/Python-2.7.2/bin:$PATH
 export PYTHONPATH=/home/scratch.ronz_maxwell/proot/caffe/python
 #setenv PERL_PRINT_LEVEL 3  #0~7 I expect
 
