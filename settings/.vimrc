@@ -24,7 +24,7 @@ set hlsearch      "set high light search
 "
 "colorscheme morning
 "colorscheme peachpuff
-colorscheme koehler
+colorscheme desert
 
 set backspace=2 "sel the flexibility of Backspace<BS> and Delete
 set mouse=a  "set mouse function
@@ -39,8 +39,8 @@ syntax on
 
 set cursorline
 set cursorcolumn
-hi cursorline cterm=NONE ctermbg=lightblue guibg=darkred guifg=white
-hi cursorcolumn cterm=NONE ctermbg=lightblue guibg=darkred guifg=white
+hi cursorline cterm=NONE ctermbg=darkblue guibg=darkred guifg=white
+hi cursorcolumn cterm=NONE ctermbg=darkblue guibg=darkred guifg=white
 
 filetype on "detect the type of file
 
@@ -170,7 +170,7 @@ let g:HiMtchBrktOn= 1
 :map <M-Esc>[65~ <S-MouseUp>
 :map! <M-Esc>[65~ <S-MouseUp>
 
-"""""""""""""""""""""""""""""
 " replace tab with space
-"""""""""""""""""""""""""""""
-"just use    :retab
+":retab
+" paste mode, no autoindent
+"set paste
