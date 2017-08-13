@@ -54,6 +54,8 @@ plugins=(git autojump autopep8 pep8 python sudo zsh-autosuggestions)
 # User configuration
 if [[ -a $ZSH/oh-my-zsh.sh ]]; then
     source $ZSH/oh-my-zsh.sh
+else
+    PROMPT=$(echo "%B%n@$YELLOW%m: $GREEN%d$_YELLOW >$FINISH ")
 fi
 
 if [[ -a ~/.localrc ]]; then
