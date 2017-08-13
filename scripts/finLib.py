@@ -1,10 +1,33 @@
 #!/usr/bin/env /usr/bin/python
+import os
+import json
+import logging
+import logging.config
+
 import numpy as np
 import getopt, sys
 import re
 import collections
 import random
 import matplotlib.pyplot as plt
+
+
+def setup_logging(
+    default_level=logging.INFO,
+    default_path='logging.json',
+    env_key='LOG_CFG'
+):
+    #Setup logging configuration
+    path = default_path
+    value = os.getenv(env_key, None)
+    if value:
+        path = value
+    if os.path.exists(path):
+        with open(path, 'rt') as f:
+            config = json.load(f)
+        logging.config.dictConfig(config)
+    else:
+        logging.basicConfig(level=default_level)
  
 ##
 # current value of a bond with specified face value (default to $100), given the following parameters
@@ -15,30 +38,33 @@ import matplotlib.pyplot as plt
 # @couponDate: derived from fCouponInterval if couponDate param is not specifically provided
 # @return: current value of the bond 
 def BondValue(fBondYield, fCouponRate, fCouponInterval, fMaturity, uFaceValue=100, couponDate = None):
+    setup_logging(logging.DEBUG)
+    logger = logging.getLogger(__name__)
     if couponDate == None:
         couponDate = np.arange(fCouponInterval, fMaturity+fCouponInterval, fCouponInterval)
-    print 'couponDate=', couponDate
+    logger.info('couponDate=%s', couponDate)
     discountRate = np.exp(-fBondYield*couponDate)
-    print 'discountRate=', discountRate
+    logger.debug('discountRate=%s', discountRate)
 
     fCoupon = fCouponInterval * fCouponRate * uFaceValue
     ucashFlowSize = couponDate.size
     cashFlow = np.ones(ucashFlowSize)*fCoupon
     cashFlow[ucashFlowSize - 1] += uFaceValue
-    print 'cashFlow=', cashFlow
+    logger.debug('cashFlow=%s', cashFlow)
 
     discountedCashFlow = discountRate * cashFlow
-    print 'discountedCashFlow=', discountedCashFlow
+    logger.debug('discountedCashFlow=%s', discountedCashFlow)
 
-    print 'boundValue=', np.sum(discountedCashFlow)
+    logger.debug('boundValue=%s', np.sum(discountedCashFlow))
     return np.sum(discountedCashFlow)
 
 def main():
+
     #bondYield  = np.array([0.065, 0.068, 0.0695])
-    fBondYield  = 0.0695
+    fBondYield  = 0.05
     fCouponRate = 0.08
     fCouponInterval = 0.5
-    fMaturity   = 3
+    fMaturity   = 1
     BondValue(fBondYield, fCouponRate, fCouponInterval, fMaturity)
 
 if __name__ == "__main__":
