@@ -2,9 +2,9 @@ version: 1
 disable_existing_loggers: False
 formatters:
     simple:
-        format: "[%(name)s - %(filename)s:%(lineno)d - %(levelname)s] %(message)s"
+        format: "[%(filename)s:%(lineno)d %(levelname)s] %(message)s"
     verbose:
-        format: "[%(asctime)s - %(name)s - %(filename)s:%(lineno)d - %(levelname)s] %(message)s"
+        format: "[%(asctime)s  %(name)s  %(filename)s:%(lineno)d %(levelname)s] %(message)s"
 
 handlers:
     console:
