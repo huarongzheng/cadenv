@@ -1,9 +1,9 @@
 #!/usr/bin/env /usr/bin/python
 import os
 import json
+import yaml
 import logging
 import logging.config
-import yaml
 
 import numpy as np
 import getopt, sys
@@ -25,7 +25,6 @@ def setup_logging(
         path = value
     if os.path.exists(path):
         with open(path, 'rt') as f:
-            print 'loading', path
             config = yaml.safe_load(f.read())
         logging.config.dictConfig(config)
     else:
