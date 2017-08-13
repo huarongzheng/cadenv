@@ -3,6 +3,7 @@ import os
 import json
 import logging
 import logging.config
+import yaml
 
 import numpy as np
 import getopt, sys
@@ -14,7 +15,7 @@ import matplotlib.pyplot as plt
 
 def setup_logging(
     default_level=logging.INFO,
-    default_path='logging.json',
+    default_path='logging.yaml',
     env_key='LOG_CFG'
 ):
     #Setup logging configuration
@@ -24,7 +25,8 @@ def setup_logging(
         path = value
     if os.path.exists(path):
         with open(path, 'rt') as f:
-            config = json.load(f)
+            print 'loading', path
+            config = yaml.safe_load(f.read())
         logging.config.dictConfig(config)
     else:
         logging.basicConfig(level=default_level)
@@ -38,7 +40,6 @@ def setup_logging(
 # @couponDate: derived from fCouponInterval if couponDate param is not specifically provided
 # @return: current value of the bond 
 def BondValue(fBondYield, fCouponRate, fCouponInterval, fMaturity, uFaceValue=100, couponDate = None):
-    setup_logging(logging.DEBUG)
     logger = logging.getLogger(__name__)
     if couponDate == None:
         couponDate = np.arange(fCouponInterval, fMaturity+fCouponInterval, fCouponInterval)
@@ -59,6 +60,7 @@ def BondValue(fBondYield, fCouponRate, fCouponInterval, fMaturity, uFaceValue=10
     return np.sum(discountedCashFlow)
 
 def main():
+    setup_logging(logging.DEBUG)
 
     #bondYield  = np.array([0.065, 0.068, 0.0695])
     fBondYield  = 0.05

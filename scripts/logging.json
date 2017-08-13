@@ -16,8 +16,9 @@
             "level": "DEBUG",
             "formatter": "simple",
             "stream": "ext://sys.stdout"
-        },
+        }
 
+    },
         "info_file_handler": {
             "class": "logging.handlers.RotatingFileHandler",
             "level": "INFO",
@@ -36,13 +37,12 @@
             "maxBytes": 10485760,
             "backupCount": 20,
             "encoding": "utf8"
-        }
-    },
+        },
 
     "loggers": {
-        "__main__": {
+        "my_module": {
             "level": "DEBUG",
-            "handlers": ["info_file_handler", "error_file_handler"],
+            "handlers": ["console"],
             "propagate": "no"
         }
     },
