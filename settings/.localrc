@@ -6,10 +6,13 @@
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 ##### aliases 
-if [ -f ~/.aliasesb  ]; then
+if [ -f ~/.aliasesb ]; then
     source ~/.aliasesb
 fi
 
+if [ -f /home/scratch.nvdisplay/PROJECTS/tree_misc_template/GPU_alias/display_standard_aliasb ]; then
+    source /home/scratch.nvdisplay/PROJECTS/tree_misc_template/GPU_alias/display_standard_aliasb  
+fi
 
 ########################################
 # CUSTOM ENV VARIABLES
