@@ -4,15 +4,15 @@ alias m='more'
 alias cp='cp -r'
 alias rm='\rm -rf'
 alias su='su -l'
-#if [ `uname` == "Darwin" ]; then
+if [ `uname` == "Darwin" ]; then
   alias l='ls -aG'
   alias ll='ls -alG'
   alias lld='ls -alFG | grep ^d'
-#else
-#  alias l='ls -aG --color=auto'
-#  alias ll='ls -al --color=auto'
-#  alias lld='ls -alF --color=auto | grep ^d'
-#fi
+else
+  alias l='ls -aG --color=auto'
+  alias ll='ls -al --color=auto'
+  alias lld='ls -alF --color=auto | grep ^d'
+fi
 alias vi=vim
 alias rd='rdesktop -g1390x970'
 alias ot='octave -qf'
