@@ -55,7 +55,7 @@ plugins=(git autojump autopep8 pep8 python sudo zsh-autosuggestions)
 if [[ -a $ZSH/oh-my-zsh.sh ]]; then
     source $ZSH/oh-my-zsh.sh
 else
-    PROMPT=$(echo "%B%n@$YELLOW%m: $GREEN%d$_YELLOW >$FINISH ")
+    PROMPT=$(echo "%B%n@%m: \e[01;34m%d\e[00m >$FINISH ")
 fi
 
 if [[ -a ~/.localrc ]]; then
@@ -64,4 +64,4 @@ fi
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
 bindkey '^s' autosuggest-clear
-
+#
