@@ -4,7 +4,7 @@ alias m='more'
 alias cp='cp -r'
 alias rm='\rm -rf'
 alias su='su -l'
-if [ `uname` == "Darwin" ]; then
+if [ `uname`=="Darwin" ]; then
   alias l='ls -aG'
   alias ll='ls -alG'
   alias lld='ls -alFG | grep ^d'
