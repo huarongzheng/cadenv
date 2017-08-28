@@ -49,6 +49,7 @@ export PATH=$PROOT/cadenv/scripts:$PATH
 export PATH=/lib:$PATH
 export PATH=$SCRIPT/nv:$PATH
 export PATH=/home/scratch.ronz_maxwell/fullchip_tree1/sw/main/apps/p4review:$PATH
+export PATH=/home/scratch.ronz_maxwell/fullchip_tree1/dev/display/infrastructure/scripts:$PATH
 export PATH=/home/scratch.ronz_maxwell/tree2/hw/nvgpu_display/ip/display/nvdisplay/2.0/disp_scripts:$PATH
 export PATH=/home/scratch.ronz_maxwell/proot/cadenv/scripts/nv:$PATH
 export PATH=/home/utils/codelite-8.0-1/bin:$PATH
