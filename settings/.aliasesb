@@ -31,3 +31,6 @@ alias gt="gnome-terminal --tab -t 'class' --tab -t 'ref'  --tab -t 'defs' --tab 
 alias msd='auto_msd'
 alias eip='/home/scratch.ronz_maxwell/proot/cadenv/scripts/nv/enter_nv_ip_log'
 
+if [[ -a /home/scratch.nvdisplay/PROJECTS/tree_misc_template/GPU_alias/display_standard_aliasb ]]; then
+  source /home/scratch.nvdisplay/PROJECTS/tree_misc_template/GPU_alias/display_standard_aliasb
+fi

@@ -17,14 +17,14 @@ set hlsearch      "set high light search
 "set color scheme
 "set t_Co=256
 "set background=dark
-"colorscheme default
+colorscheme default
 "colorscheme darkblue
 "colorscheme evening
 "
 "
 "colorscheme morning
 "colorscheme peachpuff
-colorscheme desert
+"colorscheme desert
 
 set backspace=2 "sel the flexibility of Backspace<BS> and Delete
 set mouse=a  "set mouse function
@@ -39,8 +39,8 @@ syntax on
 
 set cursorline
 set cursorcolumn
-hi cursorline cterm=NONE ctermbg=darkblue guibg=darkred guifg=white
-hi cursorcolumn cterm=NONE ctermbg=darkblue guibg=darkred guifg=white
+hi cursorline cterm=NONE ctermbg=lightgrey guibg=lightgrey guifg=white
+hi cursorcolumn cterm=NONE ctermbg=lightgrey guibg=lightgrey guifg=white
 
 filetype on "detect the type of file
 
