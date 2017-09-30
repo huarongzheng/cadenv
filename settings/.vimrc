@@ -55,7 +55,7 @@ set expandtab
 "if has("unnamedplus")
 "  set clipboard=unnamedplus
 "elseif has("clipboard")
-set clipboard=unnamed
+"set clipboard=unnamed
 "endif
 
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
