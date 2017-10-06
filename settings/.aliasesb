@@ -3,7 +3,7 @@
 alias cp='cp -r'
 alias rm='\rm -rf'
 alias su='su -l'
-alias grep='grep --color=auto'
+alias grep='grep -nr --color=auto'
 if [ `uname` = "Darwin" ]; then
   alias ls='ls -G'
 else
