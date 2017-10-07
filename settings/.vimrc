@@ -69,9 +69,6 @@ au BufRead,BufNewFile *.chc setfiletype c
 set tags=$CMOD_TOP/tags,$TREE_TRACE/tags
 "" configure tags - add additional tags here or comment out not-used ones
 "set tags+=~/.vim/tags/cpp
-"set tags+=~/.vim/tags/gl
-"set tags+=~/.vim/tags/sdl
-"set tags+=~/.vim/tags/qt4
 "" build tags of your own project with Ctrl-F12
 nmap <C-_><F12> :!cd $CMOD_TOP;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --exclude="g*_Linux_x86*" --exclude="vmod*" --exclude="syn" --exclude="gpu" --exclude="tool*" --exclude="*uvm*" --exclude="diag*" --extra=+q .;cscope -Rbq<CR>
 nmap <F5> :vertical stjump 
@@ -147,7 +144,6 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabRetainCompletionType=2
 let g:SuperTabDefaultCompletionType="<C-X><C-P>"
 
-
 """"""""""""""""""""""""""""""""""""""""""
 "  Programmings abbrevs
 """"""""""""""""""""""""""""""""""""""""""
@@ -169,6 +165,7 @@ let g:HiMtchBrktOn= 1
 :map <M-Esc>[65~ <S-MouseUp>
 :map! <M-Esc>[65~ <S-MouseUp>
 
+let g:netrw_dirhistmax=0
 " replace tab with space
 ":retab
 " paste mode, no autoindent
