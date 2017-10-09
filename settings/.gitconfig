@@ -7,12 +7,14 @@
 [http]
     sslVerify = false
 [diff]
-    tool = meld 
-#[difftool "kompare"]
-#    cmd = kompare $LOCAL $REMOTE
+    tool = vimdiff
+#    tool = bc 
+[difftool "bc"]
+	cmd = /home/ronz/bin/beyondcompare $LOCAL $REMOTE
 [difftool]
     prompt = false
-#[mergetool "kompare"]
-#    cmd = kompare $LOCAL $REMOTE $BASE $MERGED
+[mergetool "bc"]
+    cmd = /home/ronz/bin/beyondcompare $LOCAL $REMOTE $BASE $MERGED
 [mergetool]
     prompt = false
+
