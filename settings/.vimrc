@@ -18,12 +18,15 @@ set hlsearch      "set high light search
 "set background=dark
 colorscheme default
 "colorscheme darkblue
-"colorscheme evening
 "
 "
 "colorscheme morning
 "colorscheme peachpuff
 "colorscheme desert
+
+if &diff  
+    colorscheme evening
+endif
 
 set backspace=2 "sel the flexibility of Backspace<BS> and Delete
 set mouse=a  "set mouse function
