@@ -56,7 +56,7 @@ if [[ -a $ZSH/oh-my-zsh.sh ]]; then
     source $ZSH/oh-my-zsh.sh
 else
     autoload -U colors && colors
-    PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}]
+    PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}: %{$fg[blue]%}%~%{$reset_color%} ]
 %# "
 fi
 
