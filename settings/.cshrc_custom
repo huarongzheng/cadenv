@@ -15,7 +15,6 @@
 
 set path = ( \
     #/home/utils/gcc-4.1.0/bin \
-    /home/edwardc/tmux/bin \
     #/home/utils/gdb-7.10.1/bin \
  	$path:q \
  )

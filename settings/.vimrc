@@ -3,41 +3,43 @@ set nocompatible
 set softtabstop=4
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
+"set backspace=2 "sel the flexibility of Backspace<BS> and Delete
+set tabstop=4 "set tap width
+set shiftwidth=4 "set auto shift width
+set smartindent "set smart indent
 set ruler  " show the cursor position all the time
 set showcmd "display icomplete commands 
 set incsearch
+set hlsearch      "set high light search
+set nobackup
+set nowb
+set backupdir=~/.vim/backup
+set history=100 "how many line of history to rember
+set showmatch "show matching brackets
+set expandtab
 "set spell
 "set autochdir
 "set ignorecase
 "set nowrap
-set hlsearch      "set high light search
 
-"set color scheme
-"set t_Co=256
+set mouse=a  "set mouse function
+nmap <F8> :set mouse=a<cr>
+nmap <F9> :set mouse=i<cr>
+
 "set background=dark
-colorscheme default
 "colorscheme darkblue
-"
-"
 "colorscheme morning
 "colorscheme peachpuff
 "colorscheme desert
-
+colorscheme default
 if &diff  
     colorscheme evening
 endif
 
-set backspace=2 "sel the flexibility of Backspace<BS> and Delete
-set mouse=a  "set mouse function
-set tabstop=4 "set tap width
-set shiftwidth=4 "set auto shift width
-set smartindent "set smart indent
 filetype plugin indent on
 
 syntax enable
 syntax on
-
 
 set cursorline
 set cursorcolumn
@@ -46,13 +48,8 @@ hi cursorcolumn cterm=NONE ctermbg=lightgrey guibg=lightgrey guifg=white
 
 filetype on "detect the type of file
 
-set history=100 "how many line of history to rember
 
 "set report=0   "tell us anything is changed via :... 
-
-set showmatch "show matching brackets
-
-set expandtab
 
 "if has("unnamedplus")
 "  set clipboard=unnamedplus
@@ -113,8 +110,6 @@ let g:winManagerWindowLayout='FileExplorer|TagList'
 let g:winManagerWidth=40
 let g:persistentBehaviour=0
 nmap wm :WMToggle<cr>
-map <c-w><c-b> :BottomExplorerWindow<cr>
-map <c-w><c-f> :FirstExplorerWindow<cr>
 
 """"""""" MiniBufExplore """"""""""
 let g:miniBufExplMapCTabSwitchBufs = 1 
@@ -150,9 +145,7 @@ let g:SuperTabDefaultCompletionType="<C-X><C-P>"
 """"""""""""""""""""""""""""""""""""""""""
 "  Programmings abbrevs
 """"""""""""""""""""""""""""""""""""""""""
-set nobackup
-set nowb
-set backupdir=~/.vim/backup
+
 
 au BufWinLeave *.txt mkview
 au BufWinEnter *.txt silent loadview
