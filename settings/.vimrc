@@ -21,10 +21,7 @@ set expandtab
 "set autochdir
 "set ignorecase
 "set nowrap
-
 set mouse=a  "set mouse function
-nmap <F8> :set mouse=a<cr>
-nmap <F9> :set mouse=i<cr>
 
 "set background=dark
 "colorscheme darkblue
