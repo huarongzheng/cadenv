@@ -3,7 +3,7 @@
 [user]
 	email = chauviner@hotmail.com
 [credential]
-    helper = cache --timeout=28800
+	helper = store
 [http]
     sslVerify = false
 [diff]
