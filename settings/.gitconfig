@@ -3,14 +3,17 @@
 [user]
 	email = chauviner@hotmail.com
 [credential]
-    helper = cache --timeout=28800
+	helper = store
 [http]
     sslVerify = false
 [diff]
-    tool = vimdiff
+#    tool = vimdiff
+    tool = meld 
 #    tool = bc 
 [difftool "bc"]
 	cmd = /home/ronz/bin/beyondcompare $LOCAL $REMOTE
+[difftool "meld"]
+	cmd = /usr/bin/meld $LOCAL $REMOTE
 [difftool]
     prompt = false
 [mergetool "bc"]
