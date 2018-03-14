@@ -1,4 +1,4 @@
-#!/usr/bin/env /home/scratch.ronz_maxwell/tools/anaconda3/bin/python
+#!/usr/bin/env /home/tools/anaconda3/bin/python
 
 import os
 import re
@@ -17,7 +17,7 @@ import sys
 def run(batch):
     """ locate failed tests, extract corresponding level lines then generate a new level_crystal with all those failed
         level_crystal is under param batch, default ./
-        example: cd /home/scratch.hvutukuru_gpu/nvd30_1/hw/nvgpu_display_tu10x/ip/display/nvdisplay/3.0/diag/testgen/ihub_hflip_randoms
+        example: cd <your batch> 
                  ./crystallize_level.py
     """
     levelHunter = LevelHunter(batch)
@@ -52,7 +52,7 @@ class LevelHunter(object):
                         #lvlFile = open(self.lvlFileName, "w")
                         print("[tracepath{}]\n[", file=lvlFile)
                         print(cleanRawInfo, file=lvlFile)
-                        print("]", file = lvlFile)
+                        print("];\n", file = lvlFile)
                         #break
             except IOError as e:
                 print("cannot open " , self.resultFileName)
@@ -65,5 +65,5 @@ class LevelHunter(object):
                 lvlFile.close()
 
 if __name__ == '__main__':
-        run()
+    run()
 
