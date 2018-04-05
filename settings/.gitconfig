@@ -21,3 +21,5 @@
 [mergetool]
     prompt = false
 
+[push]
+	default = simple
