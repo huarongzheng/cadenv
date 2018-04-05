@@ -16,7 +16,6 @@ set nowb
 set backupdir=~/.vim/backup
 set history=100 "how many line of history to rember
 set showmatch "show matching brackets
-set expandtab
 "set spell
 "set autochdir
 "set ignorecase
@@ -162,4 +161,5 @@ let g:netrw_dirhistmax=0
 " replace tab with space
 ":retab
 " paste mode, no autoindent
-"set paste
+set paste
+set expandtab
