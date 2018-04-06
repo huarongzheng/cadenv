@@ -375,10 +375,10 @@ highlight infor ctermbg=red ctermfg=white guibg=#592929
 "syn match codingStyle /\%101v.*/  " Overlength 100 exclude comments
 syn match codingStyle /\s\+$/     " Show trailing whitespace
 syn match codingStyle /\t/        " Show tab
-let ifBrace    = matchadd ("codingStyle", "if(")
-let forBrace   = matchadd ("codingStyle", "for(")
-let whileBrace = matchadd ("codingStyle", "while(")
-let overLength = matchadd ("codingStyle", '\%121v.*')
-let spaceMiss  = matchadd ("codingStyle", '[A-Za-z0-9)]\(=\|!=\|>=\|<=\||\)')
-let spaceMiss  = matchadd ("codingStyle", '\(=\|>=\|<=\||\)[(A-Za-z0-9]')
+"let ifBrace    = matchadd ("codingStyle", "if(")
+"let forBrace   = matchadd ("codingStyle", "for(")
+"let whileBrace = matchadd ("codingStyle", "while(")
+"let overLength = matchadd ("codingStyle", '\%121v.*')
+"let spaceMiss  = matchadd ("codingStyle", '[A-Za-z0-9)]\(=\|!=\|>=\|<=\||\)')
+"let spaceMiss  = matchadd ("codingStyle", '\(=\|>=\|<=\||\)[(A-Za-z0-9]')
 let pVar       = matchadd ("codingStyle", '[A-Za-z0-9][*&]\s')
