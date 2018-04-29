@@ -1,4 +1,5 @@
 set nu
+set ruler  " show the cursor position all the time
 set nocompatible
 set softtabstop=4
 " allow backspacing over everything in insert mode
@@ -7,7 +8,7 @@ set backspace=indent,eol,start
 set tabstop=4 "set tap width
 set shiftwidth=4 "set auto shift width
 set smartindent "set smart indent
-set ruler  " show the cursor position all the time
+set expandtab
 set showcmd "display icomplete commands 
 set incsearch
 set hlsearch      "set high light search
@@ -161,5 +162,4 @@ let g:netrw_dirhistmax=0
 " replace tab with space
 ":retab
 " paste mode, no autoindent
-set paste
-set expandtab
+"set paste
