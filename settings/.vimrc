@@ -1,4 +1,5 @@
 set nu
+set ruler  " show the cursor position all the time
 set nocompatible
 set softtabstop=4
 " allow backspacing over everything in insert mode
@@ -7,7 +8,7 @@ set backspace=indent,eol,start
 set tabstop=4 "set tap width
 set shiftwidth=4 "set auto shift width
 set smartindent "set smart indent
-set ruler  " show the cursor position all the time
+set expandtab
 set showcmd "display icomplete commands 
 set incsearch
 set hlsearch      "set high light search
@@ -16,7 +17,6 @@ set nowb
 set backupdir=~/.vim/backup
 set history=100 "how many line of history to rember
 set showmatch "show matching brackets
-set expandtab
 "set spell
 "set autochdir
 "set ignorecase
