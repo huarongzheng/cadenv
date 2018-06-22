@@ -24,11 +24,11 @@ set showmatch "show matching brackets
 set mouse=a  "set mouse function
 
 "set background=dark
-"colorscheme darkblue
+colorscheme dracula
 "colorscheme morning
 "colorscheme peachpuff
 "colorscheme desert
-colorscheme default
+"colorscheme default
 if &diff  
     colorscheme evening
 endif
@@ -40,8 +40,8 @@ syntax on
 
 set cursorline
 set cursorcolumn
-hi cursorline cterm=NONE ctermbg=lightgrey guibg=lightgrey guifg=white
-hi cursorcolumn cterm=NONE ctermbg=lightgrey guibg=lightgrey guifg=white
+"hi cursorline cterm=NONE ctermbg=lightgrey guibg=lightgrey guifg=lightgrey
+"hi cursorcolumn cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=green
 
 filetype on "detect the type of file
 
