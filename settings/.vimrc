@@ -24,11 +24,11 @@ set showmatch "show matching brackets
 set mouse=a  "set mouse function
 
 "set background=dark
-colorscheme dracula
 "colorscheme morning
-"colorscheme peachpuff
 "colorscheme desert
-"colorscheme default
+"colorscheme molokai
+colorscheme abstract
+"colorscheme dracula
 "if &diff  
 "    colorscheme evening
 "endif
