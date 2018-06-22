@@ -27,8 +27,8 @@ set mouse=a  "set mouse function
 "colorscheme morning
 "colorscheme desert
 "colorscheme molokai
-colorscheme abstract
-"colorscheme dracula
+"colorscheme abstract
+colorscheme dracula
 "if &diff  
 "    colorscheme evening
 "endif
