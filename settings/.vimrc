@@ -29,9 +29,9 @@ colorscheme dracula
 "colorscheme peachpuff
 "colorscheme desert
 "colorscheme default
-if &diff  
-    colorscheme evening
-endif
+"if &diff  
+"    colorscheme evening
+"endif
 
 filetype plugin indent on
 
@@ -40,8 +40,8 @@ syntax on
 
 set cursorline
 set cursorcolumn
-"hi cursorline cterm=NONE ctermbg=lightgrey guibg=lightgrey guifg=lightgrey
-"hi cursorcolumn cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=green
+hi cursorline cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
+hi cursorcolumn cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
 
 filetype on "detect the type of file
 
