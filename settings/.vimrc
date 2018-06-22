@@ -40,8 +40,8 @@ syntax on
 
 set cursorline
 set cursorcolumn
-hi cursorline cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
-hi cursorcolumn cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
+"hi cursorline cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
+"hi cursorcolumn cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
 
 filetype on "detect the type of file
 
