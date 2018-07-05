@@ -35,20 +35,10 @@ export SCRIPT=$PROOT/cadenv/scripts
 export PATH=$PROOT/cadenv/scripts:$PATH
 export PATH=.:/lib:$PATH
 export PATH=$SCRIPT/nv:$PATH
-export PATH=/home/scratch.ronz_maxwell/fullchip_tree1/sw/main/apps/p4review:$PATH
-export PATH=/home/scratch.ronz_maxwell/fullchip_tree1/dev/display/infrastructure/scripts:$PATH
-export PATH=/home/scratch.ronz_maxwell/tree2/hw/nvgpu_display/ip/display/nvdisplay/2.0/disp_scripts:$PATH
-export PATH=/home/scratch.ronz_maxwell/proot/cadenv/scripts/nv:$PATH
-export PATH=/home/utils/git-2.7.1/bin:$PATH
-export PATH=/home/utils/automake-1.14/bin:$PATH
-export PATH=/home/utils/autoconf-2.69/bin:$PATH
-export PATH=/home/utils/libtool-2.4.2/bin:$PATH
-export PATH=/home/utils/gdb-7.9/bin:$PATH
-export PATH=/home/utils/autojump_v21.1.2/bin:$PATH
 export PATH=/utils/anaconda3/bin:$PATH
 export PATH=/utils/eclipse:$PATH
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib
 #export PYTHONPATH=/home/scratch.ronz_maxwell/proot/caffe/python
 
 ########################################
