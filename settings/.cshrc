@@ -49,12 +49,14 @@ setenv SNPS_ARCH linux
 #setenv SHLIB_PATH $SHLIB_PATH:$SYNOPSYS_CCSS/lib:$CADENCE_DIR/lib
 
 
-setenv PATH /proot/workareas/utils/cadenv/0001:/proot/workareas/utils/project_manage/0001:$PATH
-
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #  example on how to mount nas folder
 #  192.168.x.yy is the ip current assigned to u1-nas
 #  Using File Browser access: smb://192.168.1.3/BT or smb://nas-cadf9a with the ip alias  (File Browser->Computer->Network->Windows Network->workgroup->nas-cadf9a)
 
 #mount //192.168.1.3/BT /mnt/samba_u1-nas
+
+if ( -e /usr/bin/zsh) then
+    exec /usr/bin/zsh -l
+endif
 
