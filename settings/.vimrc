@@ -78,7 +78,7 @@ set splitright
 
 """"""""""""  Cscope """"""""""""
 set cscopequickfix=s-,c-,d-,i-,t-,e-
-cs add $CMOD_TOP/cscope.out $CMOD_TOP
+silent cs add $CMOD_TOP/cscope.out $CMOD_TOP
 "Find this C symbol: func name, macros, enum etc
 nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 "Find this definition
