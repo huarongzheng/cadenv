@@ -23,20 +23,20 @@ set showmatch "show matching brackets
 "set nowrap
 set mouse=a  "set mouse function
 
+syntax on
 set background=dark
 "colorscheme morning
 "colorscheme desert
 "colorscheme molokai
-colorscheme solarized
-"colorscheme dracula
+"colorscheme solarized
+colorscheme dracula
 "if &diff  
 "    colorscheme evening
 "endif
 
 filetype plugin indent on
 
-syntax enable
-syntax on
+"syntax on
 
 set cursorline
 set cursorcolumn

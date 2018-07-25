@@ -67,4 +67,3 @@ export PATH=/utils/eclipse:$PATH
 #export AUTO_UMASK=0002
 
 #mount -o shortname=mixed //192.168.1.3/public /mnt/samba_u1-nas
-
