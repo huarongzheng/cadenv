@@ -23,12 +23,12 @@ set showmatch "show matching brackets
 "set nowrap
 set mouse=a  "set mouse function
 
-"set background=dark
+set background=dark
 "colorscheme morning
 "colorscheme desert
 "colorscheme molokai
-"colorscheme abstract
-colorscheme dracula
+colorscheme solarized
+"colorscheme dracula
 "if &diff  
 "    colorscheme evening
 "endif
