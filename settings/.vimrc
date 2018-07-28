@@ -24,7 +24,7 @@ set showmatch "show matching brackets
 set mouse=a  "set mouse function
 
 syntax on
-set background=dark
+"set background=dark
 "colorscheme morning
 "colorscheme desert
 "colorscheme molokai
