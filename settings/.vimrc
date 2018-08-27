@@ -142,23 +142,43 @@ let g:SuperTabDefaultCompletionType="<C-X><C-P>"
 """"""""""""""""""""""""""""""""""""""""""
 "  Programmings abbrevs
 """"""""""""""""""""""""""""""""""""""""""
+"au BufWinLeave *.txt mkview
+"au BufWinEnter *.txt silent loadview
+"
+"let g:HiMtchBrktOn= 1
+"
+":map <M-Esc>[62~ <MouseDown>
+":map! <M-Esc>[62~ <MouseDown>
+":map <M-Esc>[63~ <MouseUp>
+":map! <M-Esc>[63~ <MouseUp>
+":map <M-Esc>[64~ <S-MouseDown>
+":map! <M-Esc>[64~ <S-MouseDown>
+":map <M-Esc>[65~ <S-MouseUp>
+":map! <M-Esc>[65~ <S-MouseUp>
+"
+"let g:netrw_dirhistmax=0
 
 
-au BufWinLeave *.txt mkview
-au BufWinEnter *.txt silent loadview
+map <silent> ,p :call YankPaste()<CR>
+map <silent> ,y y:call YankSave()<CR>
 
-let g:HiMtchBrktOn= 1
+function! YankSave()
+   let filename = $HOME . "/temp.txt"
+   call writefile([@"], filename)
+endfunction
 
-:map <M-Esc>[62~ <MouseDown>
-:map! <M-Esc>[62~ <MouseDown>
-:map <M-Esc>[63~ <MouseUp>
-:map! <M-Esc>[63~ <MouseUp>
-:map <M-Esc>[64~ <S-MouseDown>
-:map! <M-Esc>[64~ <S-MouseDown>
-:map <M-Esc>[65~ <S-MouseUp>
-:map! <M-Esc>[65~ <S-MouseUp>
+function! YankPaste()
+   let filename = $HOME . "/temp.txt"
+   if filereadable(filename)
+       let s:yanklist = join(readfile(filename), "\n")
+       call setreg('"', s:yanklist, "")
+       exec "normal! p"
+   else
+       echo "read temp.txt error"
+   endif
+endfunction
 
-let g:netrw_dirhistmax=0
+
 " replace tab with space
 ":retab
 " paste mode, no autoindent

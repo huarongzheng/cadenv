@@ -11,13 +11,13 @@
     tool = meld 
 #    tool = bc 
 [difftool "bc"]
-	cmd = /home/ronz/bin/beyondcompare $LOCAL $REMOTE
+	cmd = beyondcompare $LOCAL $REMOTE
 [difftool "meld"]
-	cmd = /usr/bin/meld $LOCAL $REMOTE
+	cmd = meld $LOCAL $REMOTE
 [difftool]
     prompt = false
 [mergetool "bc"]
-    cmd = /home/ronz/bin/beyondcompare $LOCAL $REMOTE $BASE $MERGED
+    cmd = beyondcompare $LOCAL $REMOTE $BASE $MERGED
 [mergetool]
     prompt = false
 
