@@ -9,6 +9,7 @@ set tabstop=4 "set tap width
 set shiftwidth=4 "set auto shift width
 set smartindent "set smart indent
 set expandtab
+set et|retab
 set showcmd "display icomplete commands 
 set incsearch
 set hlsearch      "set high light search
