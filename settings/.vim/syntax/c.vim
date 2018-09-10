@@ -381,4 +381,4 @@ syn match codingStyle /\t/        " Show tab
 "let overLength = matchadd ("codingStyle", '\%121v.*')
 "let spaceMiss  = matchadd ("codingStyle", '[A-Za-z0-9)]\(=\|!=\|>=\|<=\||\)')
 "let spaceMiss  = matchadd ("codingStyle", '\(=\|>=\|<=\||\)[(A-Za-z0-9]')
-let pVar       = matchadd ("codingStyle", '[A-Za-z0-9][*&]\s')
+"let pVar       = matchadd ("codingStyle", '[A-Za-z0-9][*&]\s')
