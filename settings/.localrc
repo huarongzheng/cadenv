@@ -28,15 +28,7 @@ export TERM=xterm-256color
 #######################################
 # CUSTOM PATHS
 ########################################
-export PROOT=/home/scratch.ronz_maxwell/proot
-export CADENV=$PROOT/cadenv
-export SCRIPT=$PROOT/cadenv/scripts
-
-export PATH=$PROOT/cadenv/scripts:$PATH
-export PATH=.:/lib:$PATH
-export PATH=$SCRIPT/nv:$PATH
-export PATH=/utils/anaconda3/bin:$PATH
-export PATH=/utils/eclipse:$PATH
+export PATH=~/bin:$PATH
 
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib
 #export PYTHONPATH=/home/scratch.ronz_maxwell/proot/caffe/python

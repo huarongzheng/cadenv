@@ -143,26 +143,6 @@ let g:SuperTabDefaultCompletionType="<C-X><C-P>"
 "
 "let g:netrw_dirhistmax=0
 
-
-map <silent> ,p :call YankPaste()<CR>
-map <silent> ,y y:call YankSave()<CR>
-
-function! YankSave()
-   let filename = $HOME . "/temp.txt"
-   call writefile([@"], filename)
-endfunction
-
-function! YankPaste()
-   let filename = $HOME . "/temp.txt"
-   if filereadable(filename)
-       let s:yanklist = join(readfile(filename), "\n")
-       call setreg('"', s:yanklist, "")
-       exec "normal! p"
-   else
-       echo "read temp.txt error"
-   endif
-endfunction
-
 "" YCM
 "set nocompatible              " be iMproved, required
 "filetype off                  " required
@@ -184,4 +164,10 @@ endfunction
 " paste mode, no autoindent
 "set paste
 
+map ,k :pyf ~/clang-format.py<CR>
+"function! Formatonsave()
+"  let l:formatdiff = 1
+"  pyf ~/clang-format.py
+"endfunction
+"autocmd BufWritePre *.hpp,*.h,*.cc,*.cpp call Formatonsave()
 
