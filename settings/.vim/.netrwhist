@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/ronz/proot/sdk1/framework/src/dwframework/nodes'
+let g:netrw_dirhist_2='/home/ronz/proot/sdk3/framework/src/dwframework/nodes'
+let g:netrw_dirhist_3='/home/ronz/proot/sdk1/framework/src/dwframework/nodes'
+let g:netrw_dirhist_4='/home/ronz/proot/sdk4/apps/roadrunner-2.0/graphs/idl'
+let g:netrw_dirhist_5='/home/ronz/proot/sdk1/apps/roadrunner-2.0/config/production'

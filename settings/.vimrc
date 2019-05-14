@@ -31,9 +31,9 @@ syntax on
 "colorscheme molokai
 "colorscheme solarized
 colorscheme dracula
-"if &diff  
-"    colorscheme evening
-"endif
+if &diff  
+    colorscheme angr
+endif
 
 filetype plugin indent on
 
