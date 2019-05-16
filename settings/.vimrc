@@ -32,7 +32,7 @@ syntax on
 "colorscheme solarized
 colorscheme dracula
 if &diff  
-    colorscheme angr
+    colorscheme molokai
 endif
 
 filetype plugin indent on
@@ -118,7 +118,7 @@ let g:miniBufExplMapWindowNavArrows = 1
 nnoremap <silent> <F4> :A<CR> 
 
 """""""" Grep """"""""""
-nnoremap <silent> <F3> :Grep<CR>
+nnoremap <silent> <F3> :Rgrep<CR>
 
 """""""" Super Tab """"""""""
 let g:SuperTabRetainCompletionType=2
