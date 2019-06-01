@@ -1,15 +1,68 @@
 [user]
-	name = ronz
-[user]
-	email = ronz@nvidia.com
-[credential]
-	helper = store
-[http]
-    sslVerify = false
+  #name = ronz
+  username = git
+  email = ronz@nvidia.com
+[color]
+  ui = always
+[core]
+  editor = vi
+  autocrlf = false
+  excludesfile = ~/.gitignores
+  pager = cat
+[alias]
+  # shortcuts
+  co = checkout
+  br = branch
+  ci = commit -v
+  st = status
+  ls = ls-files
+  df = diff
+  dc = diff --cached
+  
+  # (graph) logs
+  ll  = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset%  %m %C(bold white)%s%Creset%+b %C(bold magenta)%N%Creset%Cgreen(%cr) %C(bold blue)<%an>%Creset'   --abbrev-commit --date=relative
+  lla = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset%  %m %C(bold white)%s%Creset%+b %C(bold magenta)%N%Creset%Cgreen(%cr) %C(bold blue)<%an>%Creset'   --abbrev-commit --date=relative --all
+  lls = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset%  %m %C(bold white)%s%Creset%+b %C(bold magenta)%N%Creset%Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --all --stat
+  lln = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset%  %m %C(bold white)%s%Creset%+b %C(bold magenta)%N%Creset%Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --all --name-status
+  last = log -1 HEAD
+ 
+  # show ignored files
+  ign = ls-files -o -i --exclude-standard
+ 
+  # show the history of a file, with diffs
+  fl = log -u
+ 
+  # file-level ignore
+  assume   = update-index --assume-unchanged
+  unassume = update-index --no-assume-unchanged
+  assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+ 
+  # snapshot stash
+  snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+ 
+  # revert changes
+  unstage = reset HEAD --
+ 
+  # merge file selection
+  ours   = "!f() { git checkout --ours $@ && git add $@; }; f"
+  theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+ 
+  # stash regex show / apply
+  sshow  = "!f() { git stash show stash^{/$*} -p; }; f"
+  sapply = "!f() { git stash apply stash^{/$*}; }; f"
+[branch]
+  autosetuprebase = always  # perform rebase instead of merges on 'git pull'
 [diff]
-#    tool = vimdiff
-    tool = meld 
-#    tool = bc 
+  algorithm = patience  # semantically more meaningful diffs
+  tool = meld
+#  tool = vimdiff
+#  tool = bc 
+[push]
+  default = simple  # push only the current branch to the one that 'git pull' would pull from
+[fetch]
+  prune = true  # prune local branches and tags that were deleted remotely
+[gc]
+    auto = 256
 [difftool "bc"]
 	cmd = beyondcompare $LOCAL $REMOTE
 [difftool "meld"]
@@ -21,10 +74,3 @@
 [mergetool]
     prompt = false
 
-[push]
-	default = simple
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true

@@ -31,9 +31,9 @@ syntax on
 "colorscheme molokai
 "colorscheme solarized
 colorscheme dracula
-"if &diff  
-"    colorscheme evening
-"endif
+if &diff  
+    colorscheme molokai
+endif
 
 filetype plugin indent on
 
@@ -72,14 +72,12 @@ nmap <C-_><F12> :!cd $CMOD_TOP;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS 
 nmap <F5> :vertical stjump 
 "nmap <F6> :vertical stag 
 nmap <F7> :ts
-nmap <c-o> :tn<cr>
-nmap <c-p> :tp<cr>
 set splitright
 "set splitbelow
 
 """"""""""""  Cscope """"""""""""
 set cscopequickfix=s-,c-,d-,i-,t-,e-
-silent cs add $CMOD_TOP/cscope.out $CMOD_TOP
+"silent cs add $CMOD_TOP/cscope.out $CMOD_TOP
 "Find this C symbol: func name, macros, enum etc
 nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 "Find this definition
@@ -120,22 +118,8 @@ let g:miniBufExplMapWindowNavArrows = 1
 nnoremap <silent> <F4> :A<CR> 
 
 """""""" Grep """"""""""
-nnoremap <silent> <F3> :Grep<CR>
+nnoremap <silent> <F3> :Rgrep<CR>
 
-"""""""  New-Omni-Completion """"""""
-" OmniCppComplete
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-" automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-set completeopt=menuone,menu,longest,preview
-autocmd FileType python set omnifunc=pythoncomplete#Complete
 """""""" Super Tab """"""""""
 let g:SuperTabRetainCompletionType=2
 let g:SuperTabDefaultCompletionType="<C-X><C-P>"
@@ -159,28 +143,31 @@ let g:SuperTabDefaultCompletionType="<C-X><C-P>"
 "
 "let g:netrw_dirhistmax=0
 
-
-map <silent> ,p :call YankPaste()<CR>
-map <silent> ,y y:call YankSave()<CR>
-
-function! YankSave()
-   let filename = $HOME . "/temp.txt"
-   call writefile([@"], filename)
-endfunction
-
-function! YankPaste()
-   let filename = $HOME . "/temp.txt"
-   if filereadable(filename)
-       let s:yanklist = join(readfile(filename), "\n")
-       call setreg('"', s:yanklist, "")
-       exec "normal! p"
-   else
-       echo "read temp.txt error"
-   endif
-endfunction
-
+"" YCM
+"set nocompatible              " be iMproved, required
+"filetype off                  " required
+"set rtp+=~/.vim/bundle/Vundle.vim
+"
+"call vundle#begin()
+"Plugin 'VundleVim/Vundle.vim'
+"Plugin 'Valloric/YouCompleteMe'
+"call vundle#end()            " required
+"
+"filetype plugin indent on    " required
+"nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"nnoremap <leader>gi :YcmCompleter GoToInclude<CR>
+"nnoremap <leader>gt :YcmCompleter GetType<CR>
+"nnoremap <leader>gp :YcmCompleter GetParent<CR>
 
 " replace tab with space
 ":retab
 " paste mode, no autoindent
 "set paste
+
+map ,k :pyf ~/clang-format.py<CR>
+"function! Formatonsave()
+"  let l:formatdiff = 1
+"  pyf ~/clang-format.py
+"endfunction
+"autocmd BufWritePre *.hpp,*.h,*.cc,*.cpp call Formatonsave()
+
