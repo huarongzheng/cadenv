@@ -54,8 +54,8 @@
   autosetuprebase = always  # perform rebase instead of merges on 'git pull'
 [diff]
   algorithm = patience  # semantically more meaningful diffs
-  tool = meld
-#  tool = vimdiff
+#  tool = meld
+  tool = vimdiff
 #  tool = bc 
 [push]
   default = simple  # push only the current branch to the one that 'git pull' would pull from
