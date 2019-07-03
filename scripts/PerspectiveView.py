@@ -9,12 +9,13 @@ cam2rig = np.array([[-0.00714184577,   0.0456527695,   0.998931885,    1.7489999
                     [-0.000655160227, -0.998957276 ,   0.0456492454,   1.47000003],\
                     [ 0,               0,              0,              1],\
                   ])
+eye = np.mat(cam2rig[0:3,0:3])*np.mat(cam2rig[0:3,0:3]).T # cross check orthogonality
 
 rig2cam = np.zeros((4,4))
 rig2cam[0:3,0:3] = np.linalg.inv(cam2rig[0:3,0:3]) # top-left 3x3 is rotation matrix 0:3 ~ 0,1,2
 rig2cam[:,3] = -cam2rig[:,3]            # right most column is translation vector
 rig2cam[3,:] = [0, 0, 0, 1]             # bottom row is homogeneous parameter
-eye = rig2cam[0:3,0:3]*rig2cam[0:3,0:3].transpose() # cross check
+eye = np.mat(rig2cam[0:3,0:3])*np.mat(rig2cam[0:3,0:3]).T # cross check orthogonality
 
 rig2camRotation = rig2cam[0:3,0:3]
 fig = plt.figure()
