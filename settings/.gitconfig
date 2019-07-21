@@ -16,7 +16,7 @@
   ci = commit -v
   st = status
   ls = ls-files
-  df = diff
+  df = difftool
   dc = diff --cached
   
   # (graph) logs
