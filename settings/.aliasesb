@@ -9,9 +9,9 @@ if [ `uname` = "Darwin" ]; then
 else
   alias ls='ls --color=auto'
 fi
-alias l='ls -a'
-alias ll='ls -al'
-alias lld='ls -ald *'
+alias l='ls -ah'
+alias ll='ls -alh'
+alias lld='ls -aldh *'
 alias vi=vim
 alias rd='rdesktop -g1390x970'
 alias ot='octave -qf'
