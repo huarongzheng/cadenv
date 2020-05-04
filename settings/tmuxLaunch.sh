@@ -1,7 +1,7 @@
 #!/bin/zsh
 cmd=$(which tmux) # tmux path
 
-sessions=(sdk1 sdk2 sdk3 sdk4) # sessions name
+sessions=(wa1 wa2 wa3 wa4) # sessions name
 
 if [ -z $cmd ]; then
     echo "You need to install tmux."
