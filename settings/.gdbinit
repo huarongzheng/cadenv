@@ -835,3 +835,15 @@ set detach-on-fork on
 #   register_libstdcxx_printers(None)
 #end  
 
+define pptr
+	if $argc == 0
+		help pwstring
+	else
+		print *(($arg0 *)$arg1 - 1L)
+	end
+end
+
+document pwstring
+	Syntax: pptr type ptr 
+end 
+
