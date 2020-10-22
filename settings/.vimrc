@@ -60,6 +60,7 @@ au BufRead,BufNewFile *.vx setfiletype verilog
 au BufRead,BufNewFile *.mfs setfiletype c
 au BufRead,BufNewFile *.epl setfiletype c
 au BufRead,BufNewFile *.chc setfiletype c
+au BufRead,BufNewFile *.md  set filetype=
 """"""""""""""""""""""""""""""""""""""""""
 "  Plugins
 """"""""""""""""""""""""""""""""""""""""""
