@@ -840,9 +840,12 @@ define pptr
 		help pwstring
 	else
 		print *(($arg0 *)$arg1 - 1L)
-        if $argc == 4
-		    set $i = 0
-		    while $i < $arg3
+
+        # $argc not include command itself, $arg1 is 1st arg
+        if $argc == 5
+            #startIdx
+		    set $i = $arg3
+		    while $i <= $arg4
 		    	printf "elem[%u]: ", $i
 		    	p *(($arg2 *)$arg1 + $i)
 		    	set $i++
@@ -852,6 +855,6 @@ define pptr
 end
 
 document pwstring
-	Syntax: pptr type ptr <ele_type> <ele_num>
+	Syntax: pptr type arrayPtr <ele_type> <startIdx> <stopIdx>: Prints arrayPtr info(element size, count etc). If specified, print elements [<startIdx>, <stopIdx>] as <ele_type> 
 end 
 
