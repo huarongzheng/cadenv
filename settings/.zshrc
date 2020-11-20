@@ -51,7 +51,7 @@ ZSH_THEME="kphoen"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump autopep8 pep8 python sudo zsh-autosuggestions)
+plugins=(git autopep8 pep8 python sudo zsh-autosuggestions)
 # User configuration
 if [[ -a $ZSH/oh-my-zsh.sh ]]; then
     source $ZSH/oh-my-zsh.sh
@@ -68,3 +68,19 @@ fi
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
 bindkey '^s' autosuggest-clear
 #
+
+## >>> conda initialize >>>
+## !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/usr/local/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+## <<< conda initialize <<<
+

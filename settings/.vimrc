@@ -22,6 +22,7 @@ set showmatch "show matching brackets
 "set autochdir
 "set ignorecase
 "set nowrap
+set ttymouse=xterm2
 set mouse=a  "set mouse function
 
 syntax on
@@ -39,8 +40,8 @@ filetype plugin indent on
 
 "syntax on
 
-set cursorline
-set cursorcolumn
+"set cursorline
+"set cursorcolumn
 "hi cursorline cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
 "hi cursorcolumn cterm=NONE ctermbg=darkgrey guibg=darkgrey guifg=white
 
