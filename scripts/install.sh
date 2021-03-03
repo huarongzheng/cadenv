@@ -140,10 +140,7 @@ sudo apt install meld  #(useful graphical diff utility on Linux)
 sudo apt install openssh-server #(allows easy copying of files between your desktop and DDPX)
 sudo apt install pinta #(useful for annotating visual profiles on Linux)
 
-# SimpleScreenRecorder
-sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
-sudo apt update
-sudo apt install simplescreenrecorder simplescreenrecorder-lib
+
 
 # In order to flash using docker, you will need to install a specific version of the docker software.
 echo "=========================================================================="
