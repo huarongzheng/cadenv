@@ -22,7 +22,8 @@ sudo apt install \
     network-manager-openconnect-gnome \
     tmux \
     exuberant-ctags \
-    vino \
+    xfce4 \
+    vnc4server \
     dconf-editor \
     doxygen \
     dpkg-dev \
