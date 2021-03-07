@@ -1,4 +1,7 @@
-# Path to your oh-my-zsh installation.
+# Path to your oh-my-zsh installation. 
+#git clone https://github.com/ohmyzsh/ohmyzsh.git
+#cd ohmyzsh/custom/plugins
+#git clone https://github.com/zsh-users/zsh-autosuggestions.git
 export ZSH=~/ohmyzsh
 
 ZSH_DISABLE_COMPFIX=true
