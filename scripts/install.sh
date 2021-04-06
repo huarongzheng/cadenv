@@ -86,6 +86,23 @@ echo "========================="
 sudo apt install git
 sudo apt install git-lfs
 git lfs install
+    
+# In order to flash using docker, you will need to install a specific version of the docker software.
+echo "=========================================================================="
+echo " Install Docker and enable Non-root Users to Run Docker Commands"
+echo "=========================================================================="
+sudo apt update
+# sudo apt install linux-image-extra-$(uname -r) linux-image-extra-virtual
+# Install a few prerequisite packages which let apt use packages over HTTPS
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+# Add the GPG key for the official Docker repository to your system
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# Add the Docker repository to APT sources:
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt update
+sudo apt install docker-ce
+sudo usermod -aG docker $USER
+# reboot is needed to allow non-root run docker cmd without perssion issue, try docker version or docker run hello-world
 
 
 if [[ $1 == "extra" ]]; then
@@ -100,22 +117,6 @@ if [[ $1 == "extra" ]]; then
     sudo apt update
     
     sudo apt install pinta #(useful for annotating visual profiles on Linux)
-    
-    # In order to flash using docker, you will need to install a specific version of the docker software.
-    echo "=========================================================================="
-    echo " Install Docker and enable Non-root Users to Run Docker Commands"
-    echo "=========================================================================="
-    sudo apt update
-    # sudo apt install linux-image-extra-$(uname -r) linux-image-extra-virtual
-    # Install a few prerequisite packages which let apt use packages over HTTPS
-    sudo apt install apt-transport-https ca-certificates curl software-properties-common
-    # Add the GPG key for the official Docker repository to your system
-    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    # Add the Docker repository to APT sources:
-    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-    sudo apt update
-    sudo apt install docker-ce
-    sudo usermod -aG docker $USER
     
     # Update setuptools
     pip3 install --upgrade setuptools --user
