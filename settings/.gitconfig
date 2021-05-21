@@ -55,7 +55,6 @@
   tool = vimdiff
 #  tool = bc 
 [push]
-  default = simple  # push only the current branch to the one that 'git pull' would pull from
 [fetch]
   prune = true  # prune local branches and tags that were deleted remotely
 [gc]
