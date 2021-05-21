@@ -40,7 +40,7 @@ failovermethod=priority
 baseurl=https://mirrors.aliyun.com/centos-vault/centos/$releasever/centosplus/$basearch/
 gpgcheck=1
 enabled=0
-gpgkey=https://mirrors.aliyun.com/centos-vault/centos/RPM-GPG-KEY-CentOS-6
+gpgkey=https://mirrors.aliyun.com/centos-vault/RPM-GPG-KEY-CentOS-6
  
 #contrib - packages by Centos Users
 [contrib]
