@@ -854,6 +854,16 @@ define pptr
 	end
 end
 
+define stackp
+    printf "print %d stacks:\n", $arg0
+    set $i = 0
+    while $i < $arg0
+        f $i
+        printf "layer = %d\n", layer
+		set $i++
+	end
+end
+
 document pwstring
 	Syntax: pptr type arrayPtr <ele_type> <startIdx> <stopIdx>: Prints arrayPtr info(element size, count etc). If specified, print elements [<startIdx>, <stopIdx>] as <ele_type> 
 end 
