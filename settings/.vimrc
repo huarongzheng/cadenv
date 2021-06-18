@@ -26,14 +26,14 @@ set ttymouse=xterm2
 set mouse=a  "set mouse function
 
 syntax on
-"set background=dark
-"colorscheme morning
+set background=dark
+colorscheme gruvbox
 "colorscheme desert
 "colorscheme molokai
 "colorscheme solarized
-colorscheme dracula
+"colorscheme dracula
 if &diff  
-    colorscheme molokai
+    colorscheme gruvbox
 endif
 
 filetype plugin indent on
