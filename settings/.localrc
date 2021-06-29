@@ -23,7 +23,7 @@ export TERM=xterm-256color
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
+umask 002
 
 #######################################
 # CUSTOM PATHS
