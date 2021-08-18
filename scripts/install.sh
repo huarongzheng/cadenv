@@ -20,10 +20,9 @@ sudo apt install \
     dconf-editor \
     zsh \
     vim \
-    vim-gnome \
     xfce4 \
     xfce4-goodies \
-    vnc4server \
+    tightvncserver \
     openssh-server \
     nmap \
     samba \
@@ -63,13 +62,11 @@ sudo apt install \
     x11-xserver-utils \
     xorg-dev \
     zlib1g-dev \
-    libz1 \
     libncurses5 \
     libbz2-1.0:i386 \
     libstdc++6 \
     libbz2-1.0 \
     lib32z1 \
-    lib32ncurses5  \
     lib32stdc++6 \
     htop \
     libglu1-mesa-dev \
