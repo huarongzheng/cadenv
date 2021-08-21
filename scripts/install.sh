@@ -63,7 +63,6 @@ sudo apt install \
     xorg-dev \
     zlib1g-dev \
     libncurses5 \
-    libbz2-1.0:i386 \
     libstdc++6 \
     libbz2-1.0 \
     lib32z1 \
