@@ -6,6 +6,6 @@
 #
 # <file system> <mount point>   <type>  <options>       <dump>  <pass>
 # / was on /dev/sda2 during installation
-UUID=e4f4d074-b186-472b-954a-8394b9220247 /media/data0    ext4    defaults          0       2 #wd1t
-UUID=4f1db337-f41c-4420-a725-e74421f3392e /media/data1    ext4    defaults          0       2 #sg1t
-UUID=fd2a9f37-a950-437e-ab84-a56d2c4b24b0 /media/data2    ext4    defaults          0       2 #wd320g
+UUID=e4f4d074-b186-472b-954a-8394b9220247 /mnt/data0    ext4    defaults          0       2 #wd1t
+UUID=4f1db337-f41c-4420-a725-e74421f3392e /mnt/data1    ext4    defaults          0       2 #sg1t
+UUID=fd2a9f37-a950-437e-ab84-a56d2c4b24b0 /mnt/data2    ext4    defaults          0       2 #wd320g
