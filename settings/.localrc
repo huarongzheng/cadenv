@@ -16,13 +16,10 @@ fi
 #/home/nv/bin/envupdate -c
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 export TERM=xterm-256color
-## Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
 umask 002
 
 #######################################
@@ -33,29 +30,6 @@ export PATH=~/bin:~/.local/bin:/usr/local/cuda/bin:$PATH
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib
 #export PYTHONPATH=/home/scratch.ronz_maxwell/proot/caffe/python
 
-########################################
-# CUSTOM TOOLS
-########################################
-#eval `tclsh /home/utils/modules/tcl/modulecmd.tcl sh autoinit`
-#module load promanage
-#module load cadenv
-#module load ccss
-#module load vim
-#module load tkcvs
-#module load genmake/2.1
-#module load build_drxmap/1.10
-#module load eclipse/indigo-SR1
-
-
-##### cvs
-#export CVSROOT=:local:/proot/.repository
-#export EDITOR=vim
-#export CVS_RSH=ssh
-
-
-#export DISPLAY=$HOSTNAME:0.0
-#export mdd_env_version=1.1
 #export AUTO_MSD_VERSION=1.28.2
 #export AUTO_UMASK=0002
 
-#mount -o shortname=mixed //192.168.1.3/public /mnt/samba_u1-nas

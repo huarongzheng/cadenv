@@ -78,3 +78,5 @@
 [gitreview]
 	track = true
 	remote = origin
+[push]
+	default = simple
