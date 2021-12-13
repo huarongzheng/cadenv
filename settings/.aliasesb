@@ -1,5 +1,4 @@
 #!/bin/bash
-#### Aliases
 alias cp='cp -r'
 alias rm='\rm -rf'
 alias su='su -l'
@@ -11,7 +10,6 @@ else
 fi
 alias l='ls -ah'
 alias ll='ls -alh'
-alias lld='ls -aldh *'
 alias vi=vim
 alias rd='rdesktop -g1390x970'
 alias ot='octave -qf'
@@ -31,18 +29,11 @@ function set_desktop() {
 
 #### my command
 alias ccsswan='/tools/utils/cadenv/bin/ccss -cadenv-wan'
-alias jp106="setxkbmap -model jp106 -layout jp"
-alias ofdm="gnome-terminal --tab -t 'No.1 code ofdm' -e 'enter_project ip_drx_ofdm 0002' --active --tab -t 'No.2 code ofdm' -e 'enter_project ip_drx_ofdm 0002'  --tab -t 'No.3 bench ofdm' -e 'enter_project ip_drx_ofdm 0002' --tab -t 'No.4 bench ofdm' -e 'enter_project ip_drx_ofdm 0002' --tab -t 'No.5 simu ofdm' -e 'enter_project ip_drx_ofdm 0002' --tab -t 'No.6 simu ofdm' -e 'enter_project ip_drx_ofdm 0002'"
 alias com="gnome-terminal --tab -t 'No.1 code com' -e 'enter_project ip_drx_com 0001' --active --tab -t 'No.2 code com' -e 'enter_project ip_drx_com 0001'"
-alias tdofdm="gnome-terminal --tab -t 'No.1 code tdofdm' -e 'eip tree1 nvdisplay' --active"
-alias all="gnome-terminal --tab -t 'No.1 code ofdm' -e 'enter_project ip_drx_ofdm 0002' --active --tab -t 'No.2 code com' -e 'enter_project ip_drx_com 0001' --tab -t 'No.2 code iqm' -e 'enter_project ip_drx_iqm 0001' --tab -t 'No.2 code fft' -e 'enter_project ip_drx_fft 0002' --tab -t 'No.2 code fec' -e 'enter_project ip_drx_fec 0002'"
 alias gt="gnome-terminal --tab -t 'class' --tab -t 'ref'  --tab -t 'defs' --tab -t 'inc' --tab -t 'fmod' --tab -t 'session' --tab -t 'session' --tab -t 'build' --active --tab -t 'sw' --tab -t 'sw'"
 
 alias msd='auto_msd'
 alias eip='/home/scratch.ronz_maxwell/proot/cadenv/scripts/nv/enter_nv_ip_log'
 
-if [[ -a /home/scratch.nvdisplay/PROJECTS/tree_misc_template/GPU_alias/display_standard_aliasb ]]; then
-  source /home/scratch.nvdisplay/PROJECTS/tree_misc_template/GPU_alias/display_standard_aliasb
-fi
-#alias mynfs='mount -t cifs -o username=ronz,passwd=A-goup3000,uid=ronz //netapp-zj04/home_zj/ronz /mnt/netapp_ronz'
+alias databackup='time rsync -aAX --progress --delete /mnt/data0/workstation/ /mnt/data1/workstation/'
 alias mynfs='mount -t cifs -o username=ronz,vers=1.0 //netapp-zj04/home_zj/ronz ~/Documents/netapp_ronz'
