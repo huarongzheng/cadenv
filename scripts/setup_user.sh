@@ -45,10 +45,10 @@ else
 fi
 
 ln -sf $UTILS_CADENV/ohmyzsh                    $HOME_PATH/$USER_NAME/ohmyzsh
-ln -sf $UTILS_CADENV/canenv/settings/.aliasesb  $HOME_PATH/$USER_NAME/.aliasesb
-ln -sf $UTILS_CADENV/canenv/settings/.gitconfig $HOME_PATH/$USER_NAME/.gitconfig 
-ln -sf $UTILS_CADENV/canenv/settings/.localrc   $HOME_PATH/$USER_NAME/.localrc
-ln -sf $UTILS_CADENV/canenv/settings/.zshrc     $HOME_PATH/$USER_NAME/.zshrc
-ln -sf $UTILS_CADENV/canenv/settings/.vim       $HOME_PATH/$USER_NAME/.vim
-ln -sf $UTILS_CADENV/canenv/settings/.vimrc     $HOME_PATH/$USER_NAME/.vimrc
+ln -sf $UTILS_CADENV/cadenv/settings/.aliasesb  $HOME_PATH/$USER_NAME/.aliasesb
+ln -sf $UTILS_CADENV/cadenv/settings/.gitconfig $HOME_PATH/$USER_NAME/.gitconfig 
+ln -sf $UTILS_CADENV/cadenv/settings/.localrc   $HOME_PATH/$USER_NAME/.localrc
+ln -sf $UTILS_CADENV/cadenv/settings/.zshrc     $HOME_PATH/$USER_NAME/.zshrc
+ln -sf $UTILS_CADENV/cadenv/settings/.vim       $HOME_PATH/$USER_NAME/.vim
+ln -sf $UTILS_CADENV/cadenv/settings/.vimrc     $HOME_PATH/$USER_NAME/.vimrc
 

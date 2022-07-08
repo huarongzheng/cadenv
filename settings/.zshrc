@@ -64,6 +64,25 @@ else
 %# "
 fi
 
+if [ -f ~/.aliasesb ]; then
+    source ~/.aliasesb
+fi
+
+umask 002
+
+########################################
+# CUSTOM ENV VARIABLES
+########################################
+# You may need to manually set your language environment
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export TERM=xterm-256color
+
+#######################################
+# CUSTOM PATHS
+########################################
+export PATH=~/.local/bin:$PATH
+
 if [[ -a ~/.localrc ]]; then
     source ~/.localrc
 fi

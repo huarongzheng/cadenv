@@ -2,7 +2,7 @@
 [color]
   ui = always
 [core]
-  editor = vi
+  editor = vim
   autocrlf = false
   excludesfile = ~/.gitignores
   pager = cat
