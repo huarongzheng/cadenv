@@ -1,6 +1,0 @@
-#!/bin/bash
-#export CVSROOT=:ext:$USER@cvshost:/proot/ucode/0001/.repository
-cvs checkout workareas/HEAD
-mkdir $1
-mv workareas/HEAD/* ./$1
-rm -Rf workareas
