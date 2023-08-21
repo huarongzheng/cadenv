@@ -1,6 +1,6 @@
 #!/usr/bin/expect -f
 
-#autossh.sh oxterm-81 huarong new4rit
+#autossh.sh oxterm-81 username new4rit
 if { $argc < 3 } {
 puts stderr "Usage: $argv0 IPAdress Login OldPasswd"
 exit

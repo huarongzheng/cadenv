@@ -8,6 +8,11 @@ if ( -r /tools/utils/cadenv/settings/cmn.tcshrc ) source $UTILS_PATH/settings/cm
 # source ~/.cshrclocal
 if( -f ~/.cshrclocal ) source ~/.cshrclocal
 
+set path = ( \
+    #/home/utils/gcc-4.1.0/bin \
+    #/home/utils/gdb-7.10.1/bin \
+ 	$path \
+ )
 
 # If login, open bash
 # if ( $?interactivesh && $?loginsh ) then
